@@ -410,7 +410,7 @@ ada01e9bf6432b3190dcaca17fabe384071b5134 yanjen 2018-07-23 Some minor fix
 d3f2aba521d4eaceb612bee9dd84cfeba49b1384 Yuhsiang Tsai 2018-07-23 remove the executor test of creating
 87e2c43a57e2ae363f24e97083f85959da543fa8 Hartwig Anzt 2018-07-20 Merge pull request #87 from yhmtsai/fix_custom_matrix_format_cuda
 a2c299cfa1e04b5c26261f6e583e51bb7f0ae9b7 Yuhsiang Tsai 2018-07-20 fix custom_matrix_format to use c++11 and take the CMAKE_CUDA_FLAGS
-863fa4a8fd566cd998ceebe7fbf66a6fd202a633 Yuhsiang Tsai 2018-07-20 change the description when the SM is unknown
+863fa4a8fd566cd998ceebe7fbf66a6fd202a633 Yuhsiang Tsai 2018-07-20 change the description when the SM is  unknown
 2ecab533f5b7117e622c10aa4d158217c8351fe2 yanjen 2018-07-20 Merge branch 'develop' into SELL-P_gpu
 2d989a2b7d59de2013309e7b4464386bce62eb66 yanjen 2018-07-20 Merge remote-tracking branch 'upstream/develop' into SELL-P_gpu
 ea18eb3e1a26cf13365796603ac7e37f98158914 tcojean 2018-07-20 Merge pull request https://github.com/ginkgo-project/ginkgo/pull/77 from yhmtsai/SELL-P_reference
@@ -805,7 +805,7 @@ be7eb5399c1a53e43575917170c442f830953270 Goran Flegar 2018-05-04 Merge branch 'b
 f651397d76faaee085c7ff609aebd551f1b11409 Thomas Grützmacher 2018-05-04 Bf krylov convergence test
 18b35e3fdf1111383e9c176692d993b436457d27 Thomas Grützmacher 2018-05-03 Corrected executor type in cpu, gpu and reference solver.
 26683105c6e302c8965735c6aca5ee475d780724 Thomas Grützmacher 2018-05-03 Changed the executor from the cpu cg solver from Default to CpuExecutor
-5084b0d2b47e2bb2723b06158b9df8d4b5d46a10 Thomas Grützmacher 2018-05-03 Added brackets around the statement in the reference solver implementation.
+5084b0d2b47e2bb2723b06158b9df8d4b5d46a10 Thomas Grützmacher 2018-05-03 Added brackets around the  statement in the reference solver implementation.
 70cb38de5080680e012c9c3c73af3f55dcf2ac31 Hartwig Anzt 2018-05-02 ensure row major
 74f3bdf4ad8161d0af32082f19c68add4ca413ef Hartwig Anzt 2018-05-02 ensure row major
 9ef923eead13800b07a0119c36cbeb3fd21c6760 Terry Cojean 2018-05-02 Merge branch 'truncated_float' into 'develop'
@@ -950,7 +950,7 @@ d8f278fedebdfe9aafacb359317aeb5347905d55 Terry Cojean 2018-02-19 Merge branch 'b
 085904fe3bcec6d13b12acc7c31fc11d5b85b5bc Goran Flegar 2018-02-09 Remove device asserts on mac
 1696ffd6265e269d2796a1a700edb5e83e896a7e Goran Flegar 2018-02-08 Try fixing link errors on mac
 f129f49f44bb9e43109ca6fce82a009d857e9d56 Goran Flegar 2018-02-07 Remove code duplication from shuffle wrappers
-34437cda0b2bce84728f75e3e67e1dddd84fbdff Goran Flegar 2018-02-03 Fix problems with older CUDA versions
+34437cda0b2bce84728f75e3e67e1dddd84fbdff Goran Flegar 2018-02-03 Fix problems with older  CUDA versions
 a3d79d6eaa10d42b40ea1c93f379baaa47b0420f Goran Flegar 2018-02-03 Properly handle no suitable kernels exception
 f1734c9f2a1ded0bdb82473e9fb5a52f3b64b77a Goran Flegar 2018-02-03 Add docs for GPU building blocks
 51a9b29cf5b170fdaca101ac1752088bcb032bc8 Goran Flegar 2018-02-03 Refactor block-Jacobi kernels

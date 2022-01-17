@@ -323,7 +323,7 @@ be7eb5399c1a53e43575917170c442f830953270 Goran Flegar 2018-05-04 Merge branch 'b
 f651397d76faaee085c7ff609aebd551f1b11409 Thomas Grützmacher 2018-05-04 Bf krylov convergence test
 18b35e3fdf1111383e9c176692d993b436457d27 Thomas Grützmacher 2018-05-03 Corrected executor type in cpu, gpu and reference solver.
 26683105c6e302c8965735c6aca5ee475d780724 Thomas Grützmacher 2018-05-03 Changed the executor from the cpu cg solver from Default to CpuExecutor
-5084b0d2b47e2bb2723b06158b9df8d4b5d46a10 Thomas Grützmacher 2018-05-03 Added brackets around the statement in the reference solver implementation.
+5084b0d2b47e2bb2723b06158b9df8d4b5d46a10 Thomas Grützmacher 2018-05-03 Added brackets around the  statement in the reference solver implementation.
 70cb38de5080680e012c9c3c73af3f55dcf2ac31 Hartwig Anzt 2018-05-02 ensure row major
 74f3bdf4ad8161d0af32082f19c68add4ca413ef Hartwig Anzt 2018-05-02 ensure row major
 9ef923eead13800b07a0119c36cbeb3fd21c6760 Terry Cojean 2018-05-02 Merge branch 'truncated_float' into 'develop'
@@ -464,7 +464,7 @@ d8f278fedebdfe9aafacb359317aeb5347905d55 Terry Cojean 2018-02-19 Merge branch 'b
 085904fe3bcec6d13b12acc7c31fc11d5b85b5bc Goran Flegar 2018-02-09 Remove device asserts on mac
 1696ffd6265e269d2796a1a700edb5e83e896a7e Goran Flegar 2018-02-08 Try fixing link errors on mac
 f129f49f44bb9e43109ca6fce82a009d857e9d56 Goran Flegar 2018-02-07 Remove code duplication from shuffle wrappers
-34437cda0b2bce84728f75e3e67e1dddd84fbdff Goran Flegar 2018-02-03 Fix problems with older CUDA versions
+34437cda0b2bce84728f75e3e67e1dddd84fbdff Goran Flegar 2018-02-03 Fix problems with older  CUDA versions
 a3d79d6eaa10d42b40ea1c93f379baaa47b0420f Goran Flegar 2018-02-03 Properly handle no suitable kernels exception
 f1734c9f2a1ded0bdb82473e9fb5a52f3b64b77a Goran Flegar 2018-02-03 Add docs for GPU building blocks
 51a9b29cf5b170fdaca101ac1752088bcb032bc8 Goran Flegar 2018-02-03 Refactor block-Jacobi kernels

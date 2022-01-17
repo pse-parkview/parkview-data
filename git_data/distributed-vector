@@ -670,7 +670,7 @@ a37c10110d983bcc89ddefb860e94843a3626091 MarcelKoch 2021-06-28 Merge pull reques
 b2387c4ffb3ca6c68dd2f03f79825436d8d13441 Marcel Koch 2021-06-23 adds switch deactivating timings in `run_control`
 13fc933f4c0b7580b8cd374d478fedcbcf4e7c5f Marcel Koch 2021-06-23 synchronizes all timers on `tic/toc`
 7536be85589b495955be5d41069f5c723a3b2d36 Marcel Koch 2021-06-23 increases the interval between two timings
-0cf701201087c3507b7e5dd9dc91c633cce24b08 Marcel Koch 2021-06-22 Review update and `status` visability change - adds more documentation - minor formatting - made `status` private s.t. it is not part of the public interface of `IterationControl`
+0cf701201087c3507b7e5dd9dc91c633cce24b08 Marcel Koch 2021-06-22 Review update and `status` visability change - adds more documentation - minor formatting - made `status` private s.t. it is not part of the   public interface of `IterationControl`
 76604a31d861dd028f9f351d0d474e2e6bbc680d Marcel Koch 2021-06-21 enables adaptive benchmarking for preconditioner
 3a361514e8f4c33f03985f4c51180a28c8a6fe36 Marcel Koch 2021-06-18 checks benchmark completion in each iteration
 efec4c3c2af7d6e36ac1acaf985ce3c5ddfc26c3 Marcel Koch 2021-06-11 adds include guard in benchmark/utils/timer.hpp
@@ -1167,15 +1167,15 @@ db081acd882c3cf4f6c83cebce4c67bf23c11ba8 Thomas Grützmacher 2020-05-19 Add spec
 fbcc4f2db436676712cd16eafe6bc53a25d49d64 Thomas Grützmacher 2020-05-14 Made GmresMixed compile with complex types
 4ad491eb5ecc2c8cdf53515e4cb03f6696781362 Thomas Grützmacher 2020-05-13 Add Accessor support and extend reference test
 bfd4196605a3f24c8380a5156e11b30316a0d3a8 josealiaga 2020-05-13 Finally a good implementation of the multidot_kernels_num_iters_1 is done. Also timing instructions are included, whose management is made by some define's.
-f2b5a3ae2bdc6657b382a7ffe5c0d2bec5995980 josealiaga 2020-05-07 Definition of the CGS2 version of finish_arnoldi method, for omp and cuda executors. For omp, the omp is trying to move to the outer loop For cuda, the loop of kernels is change to a kernels with a loop. * The main routines (loop of dots and loop of axpy) are still too expensive.
+f2b5a3ae2bdc6657b382a7ffe5c0d2bec5995980 josealiaga 2020-05-07 Definition of the CGS2 version of finish_arnoldi method, for omp and cuda executors. For omp, the omp is trying to move to the outer loop For cuda, the loop of kernels is change to a kernels with a loop.   * The main routines (loop of dots and loop of axpy) are still too expensive.
 27019da77b965d98ca2b3288e1d2b0688c4c67fe Thomas Grützmacher 2020-05-07 Add GMRES_mixed to benchmark
 e0d39a6bda446e937d6192a2d264fcac885309eb josealiaga 2020-05-03 Definition of the CG2 variant of the finish_arnoldi routine for omp and cuda executors, as a first step in the optimization process. Also the calls for the timing are included.
 4d4fab1cbe841dbfe39e14febe0f471d888477d0 josealiaga 2020-04-30 The default value for ValueTypeKrylovBasis has been changed to avoid some errors which were detected during the testing process in the repository. The previous value was float whereas the original results were executed by default_precision, and these are the reason of the errors. Now, the default value is also default_precision.
-6dc64703680720811a1bc9cbe47206b6b5c9f166 aliaga@uji.es 2020-04-30 The first unoptimized version is done. Next tasks: * For CGS, a loop of kernels is used instead of a kernel with a loop. * Consider another base_types for ValueTypeKrylovBases
-2b7122f0762e987ddb287bb62121903369c02cb4 aliaga@uji.es 2020-04-30 The test files are finally included, but: * The messages have to be removed. * For CGS, a loop of kernels is used instead of a kernel with a loop.
-969358f726042e83302d7a94495e786c134e404b aliaga@uji.es 2020-04-29 Inclusion of the cuda executor in the repository: * For CGS, a loop of kernels is used instead of a kernel with a loop. * The test files are not repaired yet.
-d7ba04cad57be220a7a85e6a6f113767ea86c822 aliaga@uji.es 2020-04-27 Inclusion of the omp executor in the repository: * Now, the norms are properly created in the main class. * The test files are not repaired yet.
-cd1ffc93c8503eeae0a50af0b4edeb2ce3cd25f1 aliaga@uji.es 2020-04-27 First commit for the GmresMixed class: * Only core and reference executors. * test files don't compile, due to t problem related the macros of gtest (TEST_F -> TYPED_TEST). * MGS, MGS with reorthogonalization and CGS with reorthogonalization are considered. * Norms are still created in the internal routines.
+6dc64703680720811a1bc9cbe47206b6b5c9f166 aliaga@uji.es 2020-04-30 The first unoptimized version is done. Next tasks:     * For CGS, a loop of kernels is used instead of a kernel with a loop.     * Consider another base_types for ValueTypeKrylovBases
+2b7122f0762e987ddb287bb62121903369c02cb4 aliaga@uji.es 2020-04-30 The test files are finally included, but:     * The messages have to be removed.     * For CGS, a loop of kernels is used instead of a kernel with a loop.
+969358f726042e83302d7a94495e786c134e404b aliaga@uji.es 2020-04-29 Inclusion of the cuda executor in the repository:     * For CGS, a loop of kernels is used instead of a kernel with a loop.     * The test files are not repaired yet.
+d7ba04cad57be220a7a85e6a6f113767ea86c822 aliaga@uji.es 2020-04-27 Inclusion of the omp executor in the repository:   * Now, the norms are properly created in the main class.   * The test files are not repaired yet.
+cd1ffc93c8503eeae0a50af0b4edeb2ce3cd25f1 aliaga@uji.es 2020-04-27 First commit for the GmresMixed class:   * Only core and reference executors.   * test files don't compile, due to t problem related the macros of gtest (TEST_F -> TYPED_TEST).   * MGS, MGS with reorthogonalization and CGS with reorthogonalization are considered.   * Norms are still created in the internal routines.
 555b8b2aa38b60d48fa048807704d956fb183670 Pratik Nayak 2021-02-18 Merge: Add an implicit residual norm criterion.
 2f749103219adec237b9ca2ab171ff90111a950c Pratik Nayak 2021-02-18 Review udpate.
 460b7ad4db10c6c2faca16023b883124322e2c75 Pratik Nayak 2021-02-17 Add strided fill kernels for dense.
@@ -1280,7 +1280,7 @@ a313639df4949fae98600a86918e95240df0c558 Thomas Grützmacher 2020-12-07 Change b
 5f787cee737e2de6cf4f554390275ec299efdf35 Thomas Grützmacher 2021-01-15 Review update
 43caec5f056f178f47ac60744fe6e2214011eca6 Thomas Grützmacher 2021-01-13 Update interface for scalar handling
 c6e80a08e550cef275a823ca8dbe7452da6cee1b ginkgo-bot 2021-01-13 Format files
-fcddab6ed7df548ae2cd5c1df79b893066b79ae9 Thomas Grützmacher 2021-01-13 Include complex numbers in accessor tests
+fcddab6ed7df548ae2cd5c1df79b893066b79ae9 Thomas Grützmacher 2021-01-13 Include complex numbers in  accessor tests
 980ac870d46229f90453b1576040aa2a6545dfb3 Thomas Grützmacher 2021-01-11 Only add write scalar option when non-const
 a599ddd9c973784114e89fbc42a3a497210e3b72 ginkgo-bot 2020-12-07 Format files
 de70976d57147a16c693e9256cb9f5697627b5e2 Thomas Grützmacher 2020-11-27 Move are_all_integral to types.hpp
@@ -2583,7 +2583,7 @@ e49f2912b80f70a9083ea7ddaf8bcf722cec934a Pratik Nayak 2019-10-09 Update to Spars
 c94c16bcad20de15aecbcc336f1638d5e8927bd2 Pratik Nayak 2019-09-17 Add reference and omp kernels for inverse and proper permutation.
 b121942aa283e99ae5de70ac08d24e2f271e66af Pratik Nayak 2019-09-17 Add inverse permute functions to Permutable interface.
 6b59bfd0f3d956bc48e1a1d385802eaa4eea6cc3 Pratik Nayak 2019-09-17 Add the row permute and col permute kernels to CSR.
-c47f7e8fa1131ac62f016103b61bcdd2964b6987 Pratik Nayak 2019-09-15 Add framework for a Permutable interface.
+c47f7e8fa1131ac62f016103b61bcdd2964b6987 Pratik Nayak 2019-09-15  Add framework for a Permutable interface.
 0cbb67f4cfa33b4ae88771e5746700a667cc7647 Pratik Nayak 2019-09-13 Add a new permutation format.
 3ba4a47ffa0fd0532d1d6028ae43b4c39ae2e1e0 Yuhsiang M. Tsai 2019-10-30 Merge fix ell on small mtx and allow flexible warp_size
 29c6692eb85004dbd8a4e236a1c8ddc0212a6dc2 Yuhsiang M. Tsai 2019-10-30 fix ell error on small mtx and flexble warp_size
@@ -2694,7 +2694,7 @@ eec4dbe6bf6d3c12a12aff724a32de6597e92d36 Hartwig Anzt 2019-10-09 add example how
 976d71e238fc8bbd7150ba9b3fc09ae3bc588919 Pratik Nayak 2019-10-08 Merge Sparsity format Reference and OpenMP kernels.
 745eb45615e547e84b5b91b7954479cc267a312f Pratik Nayak 2019-10-08 Review update
 b8bd4773d90d4bed7b2ef588f8a8c93085e1e989 Pratik Nayak 2019-10-02 Rename Sparsity to SparsityCsr.
-8a588b87772241bd5ed95353f332bbc659c26878 Pratik Nayak 2019-10-01 Review update
+8a588b87772241bd5ed95353f332bbc659c26878 Pratik Nayak 2019-10-01  Review update
 01e798983b4edcac48855282461b37021a9b8f4b Pratik Nayak 2019-09-30 Add ref and omp count diag kernel, tests for rem diag kernel.
 31fcefd5958524a782a5be857f8f7e844658a230 Pratik Nayak 2019-09-20 Add a new constructor that automatically converts from the input LinOp.
 03d28d35c7fd473794d72e82e362fad3356ec805 Pratik Nayak 2019-09-13 Add conversions to Sparsity matrix format from CSR for all execs.
@@ -2711,9 +2711,9 @@ f01fb150b4d441803e71c83653cb3920b06fc586 Thomas Grützmacher 2019-09-24 Make ILU
 3dd594ad58db298270491f712c6c561d9aea309f Pratik Nayak 2019-09-27 Merge sparsity pattern matrix format addition.
 46b8000b129ca217a9aa8c05cdac8962cb181d5d Pratik Nayak 2019-09-26 Review update.
 4b57eab6de7ade8c0e199172710bfef9357a0ebe Pratik Nayak 2019-09-23 Review update: Improve constructors, doc and formatting.
-c7a1456312cb3152647d3d88347189b396c9076d Pratik Nayak 2019-09-20 Review update: doc, formatting, add a common value, diag count kernel.
+c7a1456312cb3152647d3d88347189b396c9076d Pratik Nayak 2019-09-20  Review update: doc, formatting, add a common value, diag count kernel.
 89034cfc080b51e2a23668e6aa70963ac3529f66 Pratik Nayak 2019-09-18 Add the adjacency matrix creation to the sparsity pattern format.
-6df1995d700dcd62bbb16b37e7a425a5e342ca26 Pratik Nayak 2019-09-12 Add a framework for the new sparsity matrix format.
+6df1995d700dcd62bbb16b37e7a425a5e342ca26 Pratik Nayak 2019-09-12  Add a framework for the new sparsity matrix format.
 cde698f5a2afc350a2bf0d854fd4147d9c3ec359 Yuhsiang Tsai 2019-09-23 Make MinGW 64-bit compile Ginkgo
 19b4de6fb4a7fe3a10f62030fd169d1aac9a82c3 Yuhsiang M. Tsai 2019-09-20 modification by comments
 fdf75551cfb91b9539097b80620e37048e288ea7 Yuhsiang M. Tsai 2019-09-18 add windows shared custom dir and check the environment path
@@ -2757,15 +2757,15 @@ da190ae98a22f5f0e86d74bf3a29023562d1d999 Thomas Grützmacher 2019-08-19 Added mu
 3517023649935adfeab681c0df4593cf8c51d61b Pratik Nayak 2019-09-18 Review update: update documentation and formatting.
 01eadd053663b80503ef732f8a771e4dc2a53cb1 Pratik Nayak 2019-09-17 Review update: rem code duplication, update YML file.
 a83c60c78cab514e74d12657ef145cee3ebd7fe8 Pratik Nayak 2019-09-16 Satisfy sonarqube's rule of 5 for {cuda}X_guards.
-45594dacf0f90fe6c312f3a294c933fa47719fa9 Pratik Nayak 2019-09-14 Add a pointer mode guard.
+45594dacf0f90fe6c312f3a294c933fa47719fa9 Pratik Nayak 2019-09-14  Add a pointer mode guard.
 abad1f36aae7d3529c0623cbc6140266fde49762 Pratik Nayak 2019-09-07 Update with the new upstream changes.
-f31d5d52872d902893608f3e152c9f712c002e35 Pratik Nayak 2019-09-01 Update with init struct and transpose checking.
+f31d5d52872d902893608f3e152c9f712c002e35 Pratik Nayak 2019-09-01  Update with init struct and transpose checking.
 a2678446cee1b01034a72ea2b6360ee374d41ed7 Pratik Nayak 2019-08-27 Fix the multiple RHS issue and also some CUDA VERSION check.
 981e22edbfb2c1cfa7360584be083424eb9520fb Pratik Nayak 2019-08-25 Add CUDA kernel with update for dummy rhs.
 492a2abacd5af46c10be9f51e299ebc8ded19733 Pratik Nayak 2019-08-19 Add CUDA kernels for upper trs.
 1b9b919d566cab75cee6291f3adf16cd922f06fb Pratik Nayak 2019-09-10 Merge Upper triangular solver with Reference and OMP kernels
 4d734e31f64ed8c887141c803c4c6e94f727487f Pratik Nayak 2019-09-10 Review update.
-0d32d72cf7119fbfacbacc63e2a8914c64d06b7b Pratik Nayak 2019-09-07 Update with new interface changes.
+0d32d72cf7119fbfacbacc63e2a8914c64d06b7b Pratik Nayak 2019-09-07  Update with new interface changes.
 994fd4b73ef79d86e0186acd2bda5070faf770b3 Pratik Nayak 2019-08-31 Init struct and transpose check flag for the Upper Trs solver.
 802811e7628e64c643a9d5e4057f59eae1dfc9fd Pratik Nayak 2019-08-23 Add a clear kernel to clear the data.
 920fe178ef84f35545005af34974f57ead504e11 Pratik Nayak 2019-08-23 Remove rhs as a parameter to generate. Use LinOp factory.
@@ -2782,9 +2782,9 @@ ceb95007d8c9f04a2c3291f62543dd3ef845b1cc yhmtsai 2019-08-27 try different approa
 5b76b934eb64a90e51c8608e1dbd8d824c1eb740 yhmtsai 2019-08-19 add simple coo spmm
 6d420ffdb3eea6a8a02266b4d16c5228477fbbde Pratik Nayak 2019-09-06 Merge Cuda kernels for Lower Triangular solver
 050c727328d767bd0d0ae4dac51021be83c7f20a Pratik Nayak 2019-09-06 Review updates.
-90b6f0a8cd3462b879a252860e5b1360454fe0b5 Pratik Nayak 2019-09-05 Move the LowerTrs core tests back to `core/test`. Review updates.
+90b6f0a8cd3462b879a252860e5b1360454fe0b5 Pratik Nayak 2019-09-05  Move the LowerTrs core tests back to `core/test`. Review updates.
 ec12e2fa558fe7cabb9e6a011aef90fe6f619313 Pratik Nayak 2019-09-04 Move the SolveStruct creation and destr to the class constr, destr.
-d8d1bb8e668548941c56749c7e776e818929e41d Pratik Nayak 2019-09-02 Move the cusparse struct to LowerTrs class.
+d8d1bb8e668548941c56749c7e776e818929e41d Pratik Nayak 2019-09-02  Move the cusparse struct to LowerTrs class.
 d01e275c78f7b73483d479ab2533ba72a554ba19 Pratik Nayak 2019-08-29 Fix the cusparse csrsm_solve issue.
 02d278796a3636de4b6dec338efc0d9ee7f5202e Pratik Nayak 2019-08-27 Review update.
 b03c57f8fb72224b2c67946b9c65ce2afa6d0849 Pratik Nayak 2019-08-27 Fix the multiple rhs problem.
@@ -3087,7 +3087,7 @@ f9d6decf16a3f28b202de1879cbe2154d9ee92dc Pratik Nayak 2019-03-29 Fix linking pro
 a0e2aa15b442e019b890cc8490510a74a2be2d28 Pratik Nayak 2019-03-29 Remove the remaining \f, get only directories.
 3901babe503eee70456cac8956e49b20af7b6b40 Pratik Nayak 2019-03-29 A minor merging issue in README.md.
 a1a2a934ed7a795cb080cfeaadf478e143b37b80 Pratik Nayak 2019-03-28 Change Windows TODO to a NOTE
-32589787d2afddf5209c35f4df26ca457add4cfb Pratik Nayak 2019-03-28 Rename example* to succinct, indicative names.
+32589787d2afddf5209c35f4df26ca457add4cfb Pratik Nayak 2019-03-28 Rename example* to succinct, indicative  names.
 ddfe0496b25ef17f5f23bdeb0bc852325f32d11e Pratik Nayak 2019-03-28 First step towards removing the generic naming of examples.
 486380039923dba16355cd420de3681863a2b2fb Pratik Nayak 2019-03-28 Fix some issues pointed out by Thomas.
 072b6eadc20fb4ceeeaea5e2f2b7c437083ae5ba Pratik Nayak 2019-03-28 Add prereq to README.
@@ -3144,7 +3144,7 @@ ed885c516af377d98421c15f4c12dd917ffc3027 Fritz Goebel 2019-04-02 Adjusted commen
 375154528c1bea642d9b3586b4fbd6e06f517387 Fritz Goebel 2019-04-01 Adjusted comments.
 cc3245c9ddec602fe1c1da4ae6399b1b43a98990 Fritz Goebel 2019-04-01 added ASSERT_EQ for slice_size and stride_factor
 ad28965b2c0fec3e5e30ab01b2fe4fed9638abf9 Fritz Goebel 2019-04-01 Adjusted conversion to sellp, added myself to contributors.txt
-eb8d029b150e00ea7a190b155659bea2f239ed4b Fritz Goebel 2019-04-01 Added reference test cases for and .
+eb8d029b150e00ea7a190b155659bea2f239ed4b Fritz Goebel 2019-04-01 Added reference test cases for  and .
 94fb3fa034f6d5af6d5bd0fe7cd8138d68da5da4 Fritz Goebel 2019-04-01 Adjusted according to suggested changes.
 852c8b409e328cbe430dbdc69f36103745109e09 Fritz Goebel 2019-03-22 Fixed typo and missing ValueType
 ab9b5214950e779716967d6dc59e53cee3745fac Fritz Goebel 2019-03-22 Implemented cuda version of the conversion from sellp to csr
@@ -3847,7 +3847,7 @@ ada01e9bf6432b3190dcaca17fabe384071b5134 yanjen 2018-07-23 Some minor fix
 d3f2aba521d4eaceb612bee9dd84cfeba49b1384 Yuhsiang Tsai 2018-07-23 remove the executor test of creating
 87e2c43a57e2ae363f24e97083f85959da543fa8 Hartwig Anzt 2018-07-20 Merge pull request #87 from yhmtsai/fix_custom_matrix_format_cuda
 a2c299cfa1e04b5c26261f6e583e51bb7f0ae9b7 Yuhsiang Tsai 2018-07-20 fix custom_matrix_format to use c++11 and take the CMAKE_CUDA_FLAGS
-863fa4a8fd566cd998ceebe7fbf66a6fd202a633 Yuhsiang Tsai 2018-07-20 change the description when the SM is unknown
+863fa4a8fd566cd998ceebe7fbf66a6fd202a633 Yuhsiang Tsai 2018-07-20 change the description when the SM is  unknown
 2ecab533f5b7117e622c10aa4d158217c8351fe2 yanjen 2018-07-20 Merge branch 'develop' into SELL-P_gpu
 2d989a2b7d59de2013309e7b4464386bce62eb66 yanjen 2018-07-20 Merge remote-tracking branch 'upstream/develop' into SELL-P_gpu
 ea18eb3e1a26cf13365796603ac7e37f98158914 tcojean 2018-07-20 Merge pull request https://github.com/ginkgo-project/ginkgo/pull/77 from yhmtsai/SELL-P_reference
@@ -4242,7 +4242,7 @@ be7eb5399c1a53e43575917170c442f830953270 Goran Flegar 2018-05-04 Merge branch 'b
 f651397d76faaee085c7ff609aebd551f1b11409 Thomas Grützmacher 2018-05-04 Bf krylov convergence test
 18b35e3fdf1111383e9c176692d993b436457d27 Thomas Grützmacher 2018-05-03 Corrected executor type in cpu, gpu and reference solver.
 26683105c6e302c8965735c6aca5ee475d780724 Thomas Grützmacher 2018-05-03 Changed the executor from the cpu cg solver from Default to CpuExecutor
-5084b0d2b47e2bb2723b06158b9df8d4b5d46a10 Thomas Grützmacher 2018-05-03 Added brackets around the statement in the reference solver implementation.
+5084b0d2b47e2bb2723b06158b9df8d4b5d46a10 Thomas Grützmacher 2018-05-03 Added brackets around the  statement in the reference solver implementation.
 70cb38de5080680e012c9c3c73af3f55dcf2ac31 Hartwig Anzt 2018-05-02 ensure row major
 74f3bdf4ad8161d0af32082f19c68add4ca413ef Hartwig Anzt 2018-05-02 ensure row major
 9ef923eead13800b07a0119c36cbeb3fd21c6760 Terry Cojean 2018-05-02 Merge branch 'truncated_float' into 'develop'
@@ -4387,7 +4387,7 @@ d8f278fedebdfe9aafacb359317aeb5347905d55 Terry Cojean 2018-02-19 Merge branch 'b
 085904fe3bcec6d13b12acc7c31fc11d5b85b5bc Goran Flegar 2018-02-09 Remove device asserts on mac
 1696ffd6265e269d2796a1a700edb5e83e896a7e Goran Flegar 2018-02-08 Try fixing link errors on mac
 f129f49f44bb9e43109ca6fce82a009d857e9d56 Goran Flegar 2018-02-07 Remove code duplication from shuffle wrappers
-34437cda0b2bce84728f75e3e67e1dddd84fbdff Goran Flegar 2018-02-03 Fix problems with older CUDA versions
+34437cda0b2bce84728f75e3e67e1dddd84fbdff Goran Flegar 2018-02-03 Fix problems with older  CUDA versions
 a3d79d6eaa10d42b40ea1c93f379baaa47b0420f Goran Flegar 2018-02-03 Properly handle no suitable kernels exception
 f1734c9f2a1ded0bdb82473e9fb5a52f3b64b77a Goran Flegar 2018-02-03 Add docs for GPU building blocks
 51a9b29cf5b170fdaca101ac1752088bcb032bc8 Goran Flegar 2018-02-03 Refactor block-Jacobi kernels

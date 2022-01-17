@@ -46,7 +46,7 @@ d8f278fedebdfe9aafacb359317aeb5347905d55 Terry Cojean 2018-02-19 Merge branch 'b
 085904fe3bcec6d13b12acc7c31fc11d5b85b5bc Goran Flegar 2018-02-09 Remove device asserts on mac
 1696ffd6265e269d2796a1a700edb5e83e896a7e Goran Flegar 2018-02-08 Try fixing link errors on mac
 f129f49f44bb9e43109ca6fce82a009d857e9d56 Goran Flegar 2018-02-07 Remove code duplication from shuffle wrappers
-34437cda0b2bce84728f75e3e67e1dddd84fbdff Goran Flegar 2018-02-03 Fix problems with older CUDA versions
+34437cda0b2bce84728f75e3e67e1dddd84fbdff Goran Flegar 2018-02-03 Fix problems with older  CUDA versions
 a3d79d6eaa10d42b40ea1c93f379baaa47b0420f Goran Flegar 2018-02-03 Properly handle no suitable kernels exception
 f1734c9f2a1ded0bdb82473e9fb5a52f3b64b77a Goran Flegar 2018-02-03 Add docs for GPU building blocks
 51a9b29cf5b170fdaca101ac1752088bcb032bc8 Goran Flegar 2018-02-03 Refactor block-Jacobi kernels
