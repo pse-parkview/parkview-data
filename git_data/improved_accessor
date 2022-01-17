@@ -1,0 +1,892 @@
+1e948262cf44a78afa83902fdf0ef628e590982b Goran Flegar 2018-06-05 Begin implementation of generic accessor
+ad439c27cef4fd0cd342054668fc98f066c4ccc5 Goran Flegar 2018-05-24 Redesign dim class for tensors and vectors
+5a4e782003d42b4a47a6c8a0dcb0865ce4d06ed9 Terry Cojean 2018-07-06 Merge branch 'fix_omp_ell_kernels' into 'develop'
+6ed2f88ba2483f3c8bfc2ee3b7de848eac9b7f9a Terry Cojean 2018-07-06 Fix OpenMP ELL kernels with change from `get_max_nonzeros_per_row()` to `get_num_stored_elements_per_row()`.
+34e1f25b70dc9f4056125f0a41981bcac23ac279 Terry Cojean 2018-07-06 Merge branch 'omp_matrix_kernels' into 'develop'
+a2144b14a46f1bf6abc5a0df8a4d36a89ae8e9dc Hartwig Anzt 2018-07-06 omp reduction
+7e7844e6104d156431c02ddbdbd8e39823647175 Goran Flegar 2018-07-06 Fix issues with OpenMP in build system
+1b97f9a2a3224c31fe4ee25cd83fdf8510019396 Goran Flegar 2018-07-04 Merge reference kernels for hybrid matrix format
+38fb026bb5afd9df6a1803baa093e9fcf1f9eed1 Yuhsiang Tsai 2018-07-04 change max_nonzeros_per_row to num_stored_elements_per_row
+adfe9c903d24475f18324d3e9ae006f0513284e7 Hartwig Anzt 2018-07-03 fix the nnz calculation in dense kernels
+fcb722a08c4c2137423c0bc5f5c3f42104792bf6 Hartwig Anzt 2018-06-28 change order of includes
+f7f1103ab6cbaf513a82c1286b244ea38ab067db Terry Cojean 2018-06-28 Add hardcoded OMP_NUM_THREADS setting for now in order to not allow oversubscription during CI tests.
+0d6da306bc7b028cd64e9dca2dda862e7d85fdab Terry Cojean 2018-06-25 Add OpenMP installation for omp/clang test.
+2b560edf98983c28bbede36e0629d58cae1dc961 Terry Cojean 2018-06-25 Fix `clang/omp` build.
+be4a59693e8005b04094d819cfe216c7c2eba541 Terry Cojean 2018-06-25 Add to the build and test steps `omp`. Also add installation of `openmp` package for `clang`.
+01310e6a59a1235da8557ffc2faf857c98c0a58b Terry Cojean 2018-06-25 Fix build when OpenMP is not found.
+4b8146bc052e576d7cfcdc58c307e466ad098e22 Hartwig Anzt 2018-06-24 no need for omp in tester
+6d709333dea07065298099a51e08bf600d098c52 Hartwig Anzt 2018-06-24 create omp kernels for matrix operations
+094bec00d07654f58a0cb22d1ffbbd5853452fb2 Hartwig Anzt 2018-06-24 create omp kernels for matrix operations
+49894bae684358b614a1c819f33145641d06ca05 Hartwig Anzt 2018-06-14 add omp kernels for the matrix formats dense, ell, csr, coo
+3909ebb6390f883c406c16f0aaca6bc07400c46a Goran Flegar 2018-07-02 Merge automatic deployment of Doxygen documentation
+e4ad4448c6494d06d6c41541e4c844e5c93a9e84 Goran Flegar 2018-07-02 Use doxygen WARN_LOGFILE, add BUILD_DOC to readme
+36a499fa548517e4e36f5c3a0a2d5985f9313be2 Yuhsiang Tsai 2018-07-02 define variables on separate lines add and modify documentation and function of strategy_type delete the repeated functions
+6a3e54b647fa94820ed9d5ee214ec132e5e5825a Yuhsiang Tsai 2018-07-01 Merge remote-tracking branch 'upstream/develop' (gpu->cuda) into hybrid_reference
+91e6e2a971ae47dc08e4439d89b6d0ee5f027c47 Hartwig Anzt 2018-06-28 Merge branch 'matrix_views' into 'develop'
+bdfc16708862e849a2ceb7c37e69db43363df3f8 Goran Flegar 2018-06-28 Add missing documentation
+e993a6c86ce2bbcf1bd1f3caba08a29310b5200e Goran Flegar 2018-06-25 Add matrix views example
+fcd8effa6a38e4d1388d589b22808808ad5d8843 Goran Flegar 2018-06-25 Add matrix view construtor to CSR, COO, ELL, Dense
+e755ffef55b62b4ebb0f962db6b88f04847f65e5 Goran Flegar 2018-06-28 Add doxygen deployment to CI system
+5c565e71252cd9ea761cf5e8f6e0265494a4a8e2 Goran Flegar 2018-06-28 Fix some minor issues in doxygen configuration
+701c554933134dbc5603554df4393300c368d5d1 Goran Flegar 2018-06-28 Merge renaming of GPU executor and folders to CUDA
+e175d1fcd6441ba8bdaa9ce2488b0107af25c57c Hartwig Anzt 2018-06-28 Gorans nitpicking
+d4d79df4a7b80a39deefd000364896d61a8cb2ad Hartwig Anzt 2018-06-28 Gorans nitpicking
+4e381c7e70f5a4c9d1d57334a6ddd744b819764c Hartwig Anzt 2018-06-28 changes according to Terrys review
+7703ab8ea4b4176f5cc799e0c4e34980d4bc396b Hartwig Anzt 2018-06-28 changes according to Terrys review
+6e4ecdabee6ad3c35f68ca9c70e89267cf071973 Hartwig Anzt 2018-06-27 some additional renaming in ci and source files
+b2aad4dcb25d3fd5e3c9707eea687af087cdaf73 Hartwig Anzt 2018-06-26 rename hooks
+56ba1c4e7bdd33ef8269a9ebb360c1f3bbff2309 Hartwig Anzt 2018-06-26 no longer needed
+348bed6fe68a09d22dfbc1bd7dc1c9f6832b56ad Hartwig Anzt 2018-06-26 changed executor from GPU to CUDA
+3650e13bf77f43238b22d2421ffdb7f667db8fbe Terry Cojean 2018-06-28 Merge branch 'fix_compilation_bugs' into 'develop'
+c1efb863414bdec0f54d35130c682d46127a676a Terry Cojean 2018-06-27 Fix three bugs which we found yesterday with @gflegar. They concern the following software and version:
+ed12b3df5d262e0c9ed13cd1bd9844d53243d7d5 Hartwig Anzt 2018-06-26 Merge branch 'array_deleter' into 'develop'
+0cc2c4422300331304da3936e949b10e561de98c Goran Flegar 2018-06-21 Update Array to properly handle "views"
+218b8a6214a364287e0f3f223a2c535b19c636b0 Goran Flegar 2018-06-21 Add some useful deleters for Array
+c0572ad84ce2523f09ba94612339b73360a06814 Goran Flegar 2018-06-26 Merge version information classes
+ab3b669982bc68251e173e6698ced065e0670fbc Goran Flegar 2018-06-20 Fix some capitalization problems in documentation
+2f7f45e5d998fa1e424dd5abe957d8d360ce4413 Goran Flegar 2018-06-19 Fix some minor build system issues
+0bd5d03f49447ebe227bd43eeda64f2d097dddb2 Goran Flegar 2018-06-19 Add implementation of version and version_info
+dc8c123914517b4e09ba5ad9447bfd2d3c358017 Terry Cojean 2018-06-26 Merge branch 'stopping_criteria_hierarchy' into 'develop'
+12ffa4c26ab9e4e01fdb101a3944957e0da7d394 Terry Cojean 2018-06-25 Specify BiCGSTAB solver is not supported without a criterion passed as parameter.
+a754e1416d7808cbb429564f053a0213975331d8 Terry Cojean 2018-06-25 Fix everything to use `NotSupported` exception and remove now useless operator= in the asynchronous solver example.
+bc8adc7254dc0b5fff350f9aab0dd913eff1aa27 Terry Cojean 2018-06-25 Improve formatting issues and exception thrown in ResidualNormReduction criterion.
+9993f3d12ca0add5f104864b418ac769ad0bfd5c Terry Cojean 2018-06-25 Make the `set_all_statuses` be a kernel and ensure that it works properly when everything is set on GPU. For convenience, an Iteration stopping criterion is used to test the implementation.
+b63b7bead05750b4ab6b8647183d7d2ed3f3a54a Terry Cojean 2018-06-25 Add an `initial_residual` optional parameter to the constructor of all criterions. Leverage its use in the `ResidualNormReduction` stopping criterion to improve the `starting_tau_` initialization.
+64195c6d370707a4cd6ed76c6a8ec6541fc959c0 Terry Cojean 2018-06-22 Fix minor code formatting problems, simplify the Time test, remove the stopping_criterion example.
+b4e8c6e406d34fab3af313d10c42cd0122b03890 Terry Cojean 2018-06-22 Correct BiCGSTAB second convergence check. Also integrate the compute_dot inside the `residual_norm_reduction` criterion.
+c176b13c6452798451c55533ed05aa7c1c667526 Terry Cojean 2018-06-21 Improve the Time stopping criterion and the Time tests.
+c98f4d00da9cf8fee3ccefa48ef2927dc0849a8c Terry Cojean 2018-06-21 Remove useless starting tau update which can be done in the first call to check in the residual norm reduction criterion.
+8d16465356a4616dd2856509094009ea9b497b35 Terry Cojean 2018-06-20 Make an example out of the ByInteraction stopping criterion.
+9b551afdc30ae1c3f6f46b9c3f03775cea53804b Terry Cojean 2018-06-19 Fix max iters to use unsigned.
+b3b5c5201a30b1da1e4a122f316cbde1cc60417c Terry Cojean 2018-06-19 Start integrating some of Goran's suggested changes. Some of the changes are the following:
+0eed95ae8a8bbb557412d7a3ff709f8e7ea2abf8 Terry Cojean 2018-06-19 Properly set the `stop_status` array and the `one_changed` boolean in all cases.
+b5c101f394674e7c323d08a5683cdfcb576598c9 Terry Cojean 2018-06-19 Fix documentation according to Hartwig's remarks.
+a2f8f869d745b5333ec4c898775fd34cf52942e6 Terry Cojean 2018-06-18 Improve documentation of all stopping criterion classes.
+151bee1a2eb6a0cf129d3df4f741f116dfdac496 Terry Cojean 2018-06-18 Unify the `GKO_ENABLE_LIN_OP_FACTORY()` macro with the similar macro created for the Criterion classes. This allows the macro to work for any class and not only class templates.
+2b8de253818a8d2bb20cc54747e9d0ef8894cbf7 Terry Cojean 2018-06-18 Reflect the new renaming to OMPExecutor.
+49ac6d705dc59c768e262bd9e39c4a199a39de20 Terry Cojean 2018-06-18 Make use of the new Abstract Factories for all stopping criterion. Along the way, transform the Combined vector of factories to a `shared_ptr` vector to make life simpler.
+50176d50bb4d00f25732272a7d7fd2e6983783f6 Terry Cojean 2018-06-15 Improve documentation.
+c586d9e93ce8f00895e09d9c0abf704c7496398a Terry Cojean 2018-06-15 Make use of PolymorphicObject in all of the stopping criterion.
+d903ea842f8a57edac3cef3d8cd85c7d9f922fca Terry Cojean 2018-06-14 Cleanup code.
+e9240788c10e0e65bbcf988201bae42b9ccd3bde Terry Cojean 2018-06-14 Minor correction
+55d2711e770b30a4e52377162d5474379597fbf7 Terry Cojean 2018-06-14 Make GPU version of stopping criterion work properly
+99a1ff6177df3bae889f4274343773b259987668 Terry Cojean 2018-06-14 Add some missing documentation.
+1d134f4c8a96a57d126170511e77368ea45eb6d6 Terry Cojean 2018-06-14 Fix problems seen when integrating Thomas' recent work for a stopping_status class.
+c4fa5c34e2ad1dfac8afd1987b470f3a86f1341e Terry Cojean 2018-06-01 Start integrating Thomas' recent work. One reference test is still failing, and GPU needs to be adapted.
+61ca3cd65781474e8f0da94bb3afa076bfb6ec59 Terry Cojean 2018-05-22 Implement some unit tests for the Combined stopping criterion. Also unify the name of `Iteration` with the other criterions.
+2047e44551b79a635bf49c120de24b1359da2310 Terry Cojean 2018-05-22 Finish working tests for the relative residual norm. Bugfix: `Array<bool> ...(...)` cannot be assumed to be initialized to false.
+f9d05c348c02f71ab6a63b93fb3484b3f4c5cb1a Terry Cojean 2018-05-18 Add working unit tests for most basic stopping criteria. Only the GPU unit test for RelativeResidualNorm is still causing some troube.
+ba73597371d9f83b9470cf01e33ccff4d6daa025 Terry Cojean 2018-05-04 Add some documentation to criterions and improve coding style.
+5532e1e5367b84543e7973297aad80165520db19 Terry Cojean 2018-05-04 Remove unneeded test_convergence kernel code in bicgstab solver.
+cfdf12771224c5ae8e064355163236658be7cc87 Terry Cojean 2018-05-03 Fix relative residual norm stopping criterion.
+c3e0a07b9a815d7c46f6d16ff5ff98d0c220175d Terry Cojean 2018-05-02 Fix compilation on GPU and fix the management of vector of unique_ptrs.
+580ede5d25e646bba7b91c7ad36f45a200b5b337 Terry Cojean 2018-05-02 Multiple fixes in the RelativeResidualNorm class.
+33564698de9dcb0dd3133268c333f9cf6d533bb6 Terry Cojean 2018-05-02 Add forgotten relative_residual_norm kernels files
+431b3d8727f3f1fa75a954a7a0a5238f07a81781 Terry Cojean 2018-04-30 Add relative residual norm criteria convergence test as an example of using kernels.
+60a1c9685772c81af835086497c60143253a3c49 Terry Cojean 2018-04-27 Minor change.
+9b587fd6c863b549944c0b57134669d2def61935 Terry Cojean 2018-04-27 Some fixes to properly make use of the combined stopping criterion. See #60.
+367bb1ce45b1c9b3e1ee6ebcad67f7da9ef3d06c Terry Cojean 2018-04-27 Add Combined stopping criterion. See #60.
+19d7f49a88a37beb500f44009949977420d8b742 Terry Cojean 2018-04-27 Temporary fix in instantiation of BiCGSTABFactory everywhere in the code. The code now compiles.
+81cc1faa9e540ad6bc10a1dd2664b11fdaf0088c Terry Cojean 2018-04-27 Remove starting tau from BiCGSTAB and adapt parameter passing to the stopping criterion. See #60.
+75e4911a6ac599de78941c97f2898531bd93e172 Terry Cojean 2018-04-27 Remove C++14 make_unique. See #60.
+8f3fe43769be3217dc4e0c7bc5a496297aa5b7e8 Terry Cojean 2018-04-26 Put overriden functions in separate cpp files.
+4826ab93b52d8b7447b0d1f6fbc7895d3832e4f0 Terry Cojean 2018-04-26 Add a bare bones stopping criterion test to check combinations of stopping criteria.
+3b5f15e650e72383c94aa773cd19b67644315e49 Terry Cojean 2018-04-26 Change BiCGSTAB to use the criterion class. See #60.
+50ac1599359b543eb9f6b69b531787948c44b122 Terry Cojean 2018-04-26 Actually, put all definitions in header files because there is pretty much no code for each of them.
+7372da88b264ff407dad2e6239fb6c4601c3b1b5 Terry Cojean 2018-04-26 Add I've lost patience stopping criterion. I.e. user input.
+14c75d615d40661e050edf7eaf624bafca3806dc Terry Cojean 2018-04-26 Add a tentative implantation of iterations stopping criterion. See #60.
+f16b16471c915dfbd2b4dba4b6f58bfce26c3483 Terry Cojean 2018-04-26 Add generic implantation of factory for time stopping criterion. See #60.
+9b9ca63933eabaa5c2dd970f336f646c339d0eff Terry Cojean 2018-04-26 Add a basic structure for the stopping criterion tests with a time test implantation. This Compiles but nothing else was checked. See issue #60.
+6f9a82b511ff4f2ab682c7d37d0db876d6a5a6ed Hartwig Anzt 2018-06-24 Merge branch 'gitlab-ci_omp' into 'develop'
+15ec9e27c8038db3fccefb1ac0b080c80335b2fa Terry Cojean 2018-06-24 Fix .gitlab-ci with the new OMP executor.
+01224509d6c8d9e79d68f1153f5e4897eddab8d2 tcojean 2018-06-22 Merge pull request https://github.com/ginkgo-project/ginkgo/pull/69 from yhmtsai/SELL-P_matrix_format
+1c50f2e9040d53eba8a4abe8a6941ea20b894c11 Yuhsiang Tsai 2018-06-21 merge 'cpu->omp' and fix the conflicts
+505f82d4d53779e61ade69ca93e0ea73185aab3f Terry Cojean 2018-06-18 Merge branch 'fix_OMP_executor_logger' into 'develop'
+0d1b22bcc208fc1f6c17f7207e2b4add1b032765 Terry Cojean 2018-06-18 Also make comments and build script use `omp`.
+82b067291ba2c24f6c650b58955fad3d24e6b507 Terry Cojean 2018-06-18 Fix the Simple Solver Logging example and the DummyLogger in the tests according to recent changes in various MRs.
+46237fff3bb7153f65f1724031dc22583d8d14f0 Goran Flegar 2018-06-18 Merge renaming of CpuExecutor to OmpExecutor
+1b82111164c8002c001ebd8b8fe109e5b7483995 Terry Cojean 2018-06-18 Merge branch 'fix_logging' into 'develop'
+78667881d25a3fabc0d557bfac350671f3e2ad19 Terry Cojean 2018-06-18 Fix Logger constructors by removing ambiguiting between default `EnablePolymorphicObject<>` constructors and the Logger's constructors.
+5447b7fdfa58766e67d42bedc7904e2201cc8f89 Terry Cojean 2018-06-14 Merge branch 'new_logging' into 'develop'
+8e7b4774999f96f61fc401096e5bb50bf682a751 Terry Cojean 2018-06-14 Improve documentation of the Logger objects and fix some code formatting issues.
+5077e84b1871e612c47725823e923d6c91b66a56 Hartwig Anzt 2018-06-14 change name of cpu executor to omp executor
+01ea87ffb0c3248ad6fb8a6fff0ec4677dba4ea0 yanjen 2018-06-14 add initial value zeros, replace std::max by max , protect default SELL-P variables
+4f6238b7309f3bdfd3fc6f8ecdf613e10eb95d92 Goran Flegar 2018-06-13 Merge branch 'doxygen' into 'develop'
+2dc68740b62611d090cab51982808e822e425065 Yuhsiang Tsai 2018-06-13 Add one 'create' format of hybrid and refine format
+0d7f214cd86436db06552e56d10a4d3e5ccba259 Yuhsiang Tsai 2018-06-13 Add Hybrid->Dense
+5617880dcc45b2796bcc2846a94cd3f8f9617679 Yuhsiang Tsai 2018-06-13 Add Dense->Hybrid, and change the strategy_type
+6d54932825e6e13ba5959c39aca9a840a3e7282e Goran Flegar 2018-06-13 Merge branch 'cmake-install' into 'develop'
+87fe477da1397743b221fe58e44f0750f517777b Tobias Ribizel 2018-06-13 disable documentation generation by default
+b364d0845d6129808b5b1b6c1360cdf56a922907 Tobias Ribizel 2018-06-13 add installation section to README.md
+0b99f3f079eb68d56019e311e6b97e1df0d31843 Tobias Ribizel 2018-06-13 disable installation of GTest and GMock
+c5735c315c4d44ca8e11b3eaf7f04dc040818958 Tobias Ribizel 2018-06-13 fix incorrect installation paths
+112c2beec8035d37f77758db32487220a9058078 Hartwig Anzt 2018-06-13 Merge branch 'add_include_array' into 'develop'
+88f4f6eaf9607ff04625f818fe5f9b490ac1087b Yuhsiang Tsai 2018-06-13 add get_ell, get_coo function in core/hybrid.hpp, add spmv/advanced_spmv in reference/hybrid_kernel.hpp
+152188122dc2b497e3080e898c6b6f063ba412f4 yanjen 2018-06-13 add last entry for slice_sets
+305d09d3a701867863cd685c9ccbf486f9c85134 yanjen 2018-06-13 change slice_lens to slice_lenghts
+70f3015703cd9d248107ef017c03fc4c35aebe04 Hartwig Anzt 2018-06-12 add the inlude of array - this is needed for compilation at least on MacOs
+bed1e0c6591f895115841b211cad836fadd786f5 Tobias Ribizel 2018-06-12 declare project at only one place in CMakeLists.txt
+7caf2db833de3b33e7338d2285c6056e59dbf3e7 Tobias Ribizel 2018-06-12 remove conditional dependencies
+480f42205126656bf01f4614b8ab857ec00fc55c Tobias Ribizel 2018-06-12 remove unnecessary ignores in .gitignore
+f205f5cde58c8a3b463f4f23b7d71a8baf7f4434 Tobias Ribizel 2018-06-12 fix broken CMakeLists.txt
+99484d1a3a9ba88810b2335a1abb93134c37bc77 Tobias Ribizel 2018-06-12 restructure doxygen configuration files
+2159dbf2e406b0229bf38a81a59399a0c629e5df Tobias Ribizel 2018-06-12 fix doxygen version extraction
+d1db1ee8e8190630434e245d0180dc6eced2265d Tobias Ribizel 2018-06-12 Merge branch 'develop' into doxygen
+7d05ae520530803903f8207c65f34ece8eea9b34 Tobias Ribizel 2018-06-11 improve Doxyfile diff filter
+9155d1333473128fe7764a73637720b5296b698f Tobias Ribizel 2018-06-11 add basic `make install` step
+582198ecd61e6d6eb6d14288bf498403cca527c1 Terry Cojean 2018-06-08 Fix `simple_solver_example` to use shared_ptr otherwise we cannot access the values...
+ca46ff49e97734f6ae6e76a703fd9b2235603dca Terry Cojean 2018-06-07 Cleanup the assignment constructors.
+14f797223cf69a7f9c3adebfb610c376eceac630 Terry Cojean 2018-06-07 Fix multiple code formatting problems. Make use of mutable to simplify classes. Use `EnableCreateMethod` and make loggers give `unique_ptr`.
+cf45e966e805fe27c8444cb8157ecb306cd883f6 Terry Cojean 2018-05-29 Ensure zero initialization of structure as extra safety. Also cleanup some asserts in stream logger.
+3865223028cb93aaacf8c4d20c13bd0fd7587687 Terry Cojean 2018-05-29 Fix CMake check_include_file: configure file needs to be set at the end somehow!
+29cbe1500153da2fcfc75854a47061d73504a0b3 Terry Cojean 2018-05-28 Rename ReturnObject into Record for a simpler and better name.
+8902b43152800c1f7779f53086d2f84a98fdd624 Terry Cojean 2018-05-28 Add Goran's trick using lambdas to properly get and demangle a function's name.
+4330fb41027d23ddda385d3af7db73315ac8ab19 Terry Cojean 2018-05-28 Fix documentation and Logger class hierarchy. Make us of PolymorphicObject and related classes. Two problems appeared, see the TODO in the code.
+3fb0b3d96d83be5fd37f727bdb61f06f4fe01733 Terry Cojean 2018-05-23 Fix incompatible old code due to the class hierarchy improvement MR.
+c14a092897a534bbab602dc368c823ab42778a12 Terry Cojean 2018-05-22 Add cstdlib header to properly find `std::free` in all cases.
+576ed8d1f998bbcc1e3b57fe84e3ff6b7ec854d6 Terry Cojean 2018-05-17 Fix documentation style problems.
+c0865b032fd1bba31e4acd8ef05b5ccfc70b0322 Terry Cojean 2018-05-17 Improve Ostream and ReturnObject Logger classes.
+76e97fbd1064906fe9f1254358f741686b134087 Terry Cojean 2018-05-17 Add documentation for `name_demangling`.
+e425b147838eca8017936266a961bb828abf55ca Terry Cojean 2018-05-17 Add name demangling functionality.
+6a8f78c9425cd08029684cf99904100cce3b83a3 Terry Cojean 2018-05-17 BUGFIX: Do not use `make_shared<T>()` due to a weird, compiler or library bug, observed on some MacOS.
+5a940a4b5b2cc23e308b3d1f1731f54a492a6897 Terry Cojean 2018-05-16 Improve initializations for Logger's bitmap and potentially the LoggedData struct. Also improve test checks for better report (prefere ASSERT_EQ and such over ASSERT_TRUE).
+a43a2548ce0d348b0e44757db0d6e448216c4cf3 Terry Cojean 2018-05-15 Improve ostream test robustness for empty input strings.
+b15202add1c63697aee59886d9f94051da79cf2e Terry Cojean 2018-05-15 Simplify all tests thanks to @gflegar's remarks.
+419595520f0d1ec753b41a6473fd9e89baeb0315 Terry Cojean 2018-05-15 Specify we use a templated function to make clang happy.
+8e41e0c8d60082ca023c6d9617a9f1f7d0bbc32c Terry Cojean 2018-05-15 Fix documentation and naming problems as noted by @gflegar.
+2ccd4980acbd2a73a27d434edf9c3cbf0abcbc93 Terry Cojean 2018-05-15 Change the type of Logger's masks to `gko::uint64` to better express the fact that we are currently limited to 64 bits.
+ed1ad9f28f5474ec63b1a489c377166e7fe7acc9 Terry Cojean 2018-05-15 Add simple_solver_logging example and fix minor unused variable warnings.
+8b3e0b95831e207bb082cab998b9fef4499854d2 Terry Cojean 2018-05-11 Add demangling for gcc/clang.
+89716e0f35c789a69e74c6197f99afd9855f59f2 Terry Cojean 2018-05-10 Improve apply event by adding a string argument.
+b47b3272e8d31aa81fb0de3d8d320afc39f2e326 Terry Cojean 2018-05-10 Add unit tests to all loggers.
+e7bd2bc1a8854cbaa72587f8e4fed6e445ff76d4 Terry Cojean 2018-05-08 Minor format improvement.
+413674f2828420c92bedcad43e0b784014c10243 Terry Cojean 2018-05-08 Add a "ReturnObject" Logger which allows returning an object containing all the logged data.
+a10c1590ebe09ed347ae8272f0a974eb3a8e0921 Terry Cojean 2018-05-08 Add documentation to the logging classes.
+249429dcaf71fb49847783ec76cc9a3fea2895ed Terry Cojean 2018-05-08 Most logging event parameters can (should) be const.
+ae9a5de2cf16e6aa3d039c1dbc7e9c5a881b844c Terry Cojean 2018-05-08 Add residual to converged log event.
+1141d3bbcb275858dcd88849d5e6d54b07fd7522 Terry Cojean 2018-05-07 Use constexpr in the .cpp file also.
+cc9541d7d25f364467688fcf9836c6042b3da717 Terry Cojean 2018-05-07 Minor: add space for prettier formatting.
+7401f75556c5f155df8fb071e0a38eeb129a2cfc Terry Cojean 2018-05-07 Fix all_events_mask.
+7d741d171d95ada53553ca3f92f95f535002cb9d Terry Cojean 2018-05-07 Add a working basic ostream logger with the current events. Something very annoying is the static constexpr problem for the masks which require putting them somewhere in a .cpp file.
+08869b54345f789659635e209b11b79a7ba757a9 Terry Cojean 2018-05-07 Add Logger definitions and simple Logger interaction for CG class.
+74d2140459f0d3f42a901d0f6974ed8e5d4b021a Goran Flegar 2018-06-08 Merge random matrix generator with condition number
+e00610e540126db45fa9bb9ef9610c727e4052ce Tobias Ribizel 2018-06-08 fix wrong mainpage paths for documentation
+37e453096bbe46918d075d341acf2d180b69e252 Tobias Ribizel 2018-06-08 add some missing documentation
+d763c3efc00c3f6029e3178f822bcae74ded6954 Tobias Ribizel 2018-06-08 improve documentation generation
+65c1e839e3507e02fd437d08080c36574444fca8 Goran Flegar 2018-06-07 Merge fix for compile error of bitwise_not in gcc-5.5
+e51d1f082ad4dfc9d4fd13d053b43e345bb1887b Goran Flegar 2018-06-07 Fix documentation issues with matrix_data
+23803a9573e53307587d16c3ee05b67ee1540840 Goran Flegar 2018-06-07 Merge fix for atomic-related issues with custom value types
+2434fb63f6df317897c254550023bf967371d719 yanjen 2018-06-08 change names of variables
+69510500617183a7b72798fc3f6a7049b1808db4 yanjen 2018-06-08 Merge remote-tracking branch 'upstream/develop' into SELL-P_matrix_format
+2bf41efb1cdaf32bc1ffff3657eb02a96ec41ee5 yanjen 2018-06-08 Add comments
+d80c4fae122e89914b4bb6dd4447be6ef4f221c6 yanjen 2018-06-08 add test for core/matrix/sellp
+375f7f4ce19c3e01f2d9daac37ead7fa654b63ae yanjen 2018-06-08 add padding
+099ab3642f409f42395f8657aa49bcbdc6d5cd06 yanjen 2018-06-08 sellp write
+4df90d1d09f695f89dc72296cedc274dca55bbfa yanjen 2018-06-07 sellp read
+10c6b15bb846caa71538b5b0d323fffb5d1d6780 Yuhsiang Tsai 2018-06-07 fix compile error of bitwise_not in gcc5.5
+f4784b0afbde8eef03aee33602ba636683597e02 Goran Flegar 2018-06-07 Add documentation for matrix_data::cond
+4e80dd75d6c8d4dfbc5a7407ec639854fd030aca Goran Flegar 2018-06-07 Add tests for random matrix with cond generator
+6e480ff3c1ed076f7541cc3b4345600f3832f99d Goran Flegar 2018-05-21 Add random matrix with condition number generator
+38c779ee6e94a23e1e8a431194422cccbc7da77f Goran Flegar 2018-06-06 Make Ginkgo compile with custom value types
+c8f5039f47716adbe2a0f74ec6087e1393a6c7ec Yuhsiang Tsai 2018-06-07 Merge class structure for Hybrid matrix format
+adde1c16bdea0fcff25cb209f220d7100854d131 Goran Flegar 2018-06-06 Merge GPU kernels for COO matrix format
+97dbbc10712cdc19227329e3ad4b4c2a779aa4c6 Yuhsiang Tsai 2018-06-06 fix Kepler atomicadd of double type
+972c52fb3ae4497d12349d68c8457b1747069ec3 Goran Flegar 2018-06-06 Merge a fix for compilation issues with CUDA 9.2
+e512b1fc3082cb3a5154940013a5d02cd4789f6b yanjen 2018-06-06 Merge remote-tracking branch 'upstream/develop' into SELL-P_matrix_format
+0a5dc1ef6017799c0284360dbcff422d068c9327 Goran Flegar 2018-06-05 Add CUDA 9.2 to GPU detection script
+f5bf8a6a017d334ab29ac524461e0cc48705cf7d Goran Flegar 2018-06-05 Merge support for custom value types
+e4221122a79a25d3fb55300708106636feac8f9a Goran Flegar 2018-05-23 Add full set of includes to ginkgo.hpp
+2e969472ad81c6d2e1067f6b0899d5a8b487c8f4 Goran Flegar 2018-05-11 Add custom add_scaled and scale kernels
+32a8c8c2375797bbde6fcd006f607ef091f95471 Goran Flegar 2018-05-10 Add custom implementation of dot product
+6ee967822cc2974441acfcb64c95685892c26f1b Goran Flegar 2018-05-09 Fix compilation issues with custom value types
+3ec7d260571afc5633d3c0a4f85e606c05df149b Yuhsiang Tsai 2018-05-31 change the type in std::min of calculate_nwarps
+0da09e3254c92a8da37bede482b09d8719eac004 Hartwig Anzt 2018-05-30 Merge branch 'bicgstab_second_convergence_test' into 'develop'
+e40e06ca08829aaf08f30a1a4e56d66c9214f3b3 Thomas Grützmacher 2018-05-30 renamed StoppingStatus to stopping_status (according to guidelines)
+4c6c4e4213cc8c6f57a1c307ac0416d99fea7892 Thomas Grützmacher 2018-05-30 Added an underscore to all private data members.
+c780c1ef0f318bfb7e64834c478fb7d4e940578d Thomas Grützmacher 2018-05-30 Added forgotten newlines in bicgstab_kernels.hpp and stopping_status.hpp
+bd2fb6d08b344065d7aedfb32e9da651e5ae5665 Thomas Grützmacher 2018-05-29 Added forgotten {} in bicgstab.cpp
+a4acafd64bc5a22431b444bd342c29972a956dc7 Thomas Grützmacher 2018-05-29 Added newline in stopping_status.hpp according to guidelines and updated the define to express the current location of the file; Updated comment in bicgstab.cpp regarding adde class StoppingStatus.
+bae2c6bdc297ff98917aa7a1f608226627bc9cc6 Thomas Grützmacher 2018-05-28 Removed max_iter test from the middle of the BiCGSTAB loop.
+f2e3829a3ecaa9bce640ec32ba2eb62dd2dcee4f Thomas Grützmacher 2018-05-27 Renaming (to stop_status) to be consistent; Added a one_changed variable to see if any variable converged during testing; Removed the iteration increment mid loop; Corrected the test_convergence function.
+01c26eb2901054a92fd77c077309174d7d83892c Thomas Grützmacher 2018-05-25 changed how the finalized kernel works in BiCGSTAB (it needs to be called in every iteration after the convergence test).
+95ccadda2570ceefa87dece4197dc86f35d931e8 Thomas Grützmacher 2018-05-25 moved stopping_status.hpp into core/stop/; changed test_convergence kernel to check for has_stopped instead of has_converged (in BiCGSTAB).
+4b6aa59a6f7f834499d9a0350a3d096dd0b612bd Thomas Grützmacher 2018-05-25 removed the 2nd incrementation of iteration-count in bicgstab
+6a05aaa6de62bc9bf82a9714d85d9d1bbed01e9a Thomas Grützmacher 2018-05-25 Added a finalize kernel to bicgstab; Corrected the implementation of the 2nd convergence test (tau recalculation was missing).
+be67765675731d98d5a1564299a7bb19d91b90eb Thomas Grützmacher 2018-05-24 Changed from struct stopping_status to class StoppingStatus (because the underlying data is hidden).
+f9d3f20745bbcac0f646cae518ff967dc36755c9 Thomas Grützmacher 2018-05-24 CUDA kernel uses stopping_status as well now (instead of casting to bool)
+2a0acc351bdeea3dcb28346f384788c8585826fc Thomas Grützmacher 2018-05-24 Corrected stopping_status ifndef/define name to accurately represent the colation where it is stored.
+eb154a516b4e51080ea4868d9b60d6527490e381 Thomas Grützmacher 2018-05-24 Added uint8 and int8 type support in ginkgo; Added stopping_status struct and used it in the bicgstab solver; GPU implementation of the new stopping_status usage not correctly implemented; Finalize kernel not added (yet);
+e1def02bffdabf6dc5792193a98137f413ece595 Thomas Grützmacher 2018-05-23 Fixed compiler error (in core/solver/bicgstab.cpp) due to rebasing.
+7cabbe38bcc63ad7e2922efaf7af4b92139420d9 Thomas Grützmacher 2018-05-03 Removed the second convergence test kernel. Replaced it in the solver with the preexisting one.
+1d0a215a931bb0cc42a471eba49b35054343500d Thomas Grützmacher 2018-05-03 Added gpu implementation for second convergence test in bicgstab. Improved performance by moving x += alpha * y from step_3 to step_2 in all implementations.
+d4236415f73843cbe4459114bee437ca1fb21747 Thomas Grützmacher 2018-05-03 Improved performance of bicgstab after adding the second convergence test.
+67fc5208575d5acfb9799004298ef2856460160d Thomas Grützmacher 2018-05-02 Found and fixed error in second bicgstab convergence test.
+0b6d92ba1c2cbec78e8e8a0e8b53f5eb3059e531 Thomas Grützmacher 2018-05-02 Step towards better performance regarding second convergence test in bicgstab
+671e8993c2627bda7ba697489a76a60c13c1a9f7 Thomas Grützmacher 2018-04-27 Changed the norm comparison to the same as the other convergence test (made it relative)
+bbe6efc8670549510728c972455ca11a2743347e Thomas Grützmacher 2018-04-27 Resolved some compiling issues with cpu and gpu versions of second convergence test of bicgstab.
+c72f4c477702af502066c0dcfd15bc0bde7a96dd Thomas Grützmacher 2018-04-27 Finished first implementation of the additional convergence criteria on gpu.
+029e7866fbdeda36d51f08c28e0de57f8129bd1e Thomas Grützmacher 2018-04-26 added cpu stub for additional convergence test, started on the gpu implementation.
+c5d01d142141a436fff8f7c61a9bb94c3e79de84 Thomas Grützmacher 2018-04-26 Added implementation for using the new convergence test in core/bicgstab. Also implemented the reference version.
+1339cdcc6afbce3aa37ca38af83bea119b4b7581 Thomas Grützmacher 2018-04-26 Added additional convergence test criteria to bicgstab
+3df0c7d26f149e5fff851da3916e240e6f69647a Yuhsiang Tsai 2018-05-30 refine code according to comments
+d2d38f0b417221d521a8a9674a97748d9b7cf13d Hartwig Anzt 2018-05-30 Merge pull request #59 from ginkgo-project/preliminary_range_support
+e8ac5c096496b4e8625f241fe5f363fd9d758461 Yuhsiang Tsai 2018-05-30 add calculate_nwarps function and change naming
+1d79a4b9804b494e00e069ea2b9e69b1ff46c6fe Yuhsiang Tsai 2018-05-30 merge two similar spmv_kernel
+4307a96e527cc115f43a30709e222c46830db5a6 Yuhsiang Tsai 2018-05-30 move the atomic_add function to gpu/components/atomic.cuh
+fe63f2e2b0ee5ec4a2e12844b730faa76783f3f4 Terry Cojean 2018-05-28 Merge branch 'test_convergence_correction' into 'develop'
+f93c63891c0f11e83bb253703f0d54b47b1e2f26 Thomas Grützmacher 2018-05-28 Added previously forgotten host->gpu memory copy in test_convergence in all solver.
+ceee039c067586f051c9026c8d7b5634ec25b4de Terry Cojean 2018-05-25 Merge branch 'automatic_repo_synchronization' into 'develop'
+c236226bc30d1f67ec5a61afe703e0a5d0d14183 Goran Flegar 2018-05-25 Merge GPU kernels for block-diagonal detection
+b4f69739994bab8509900dc6d5210584961422a4 Hartwig Anzt 2018-05-25 add __restrict__ and change naming
+c1425cede51130ef089a85382e302813c28a5562 Hartwig Anzt 2018-05-25 add __restrict__ and change naming
+93dc98c1cfc907fefbe83271e7880208a033f819 Goran Flegar 2018-05-24 Fix minor issues with ranges
+6e7fc060282489872fff5f419a9cc17fe2d99fc4 Goran Flegar 2018-05-21 Add docs for ranges and supporting types
+0c854a4242fd79efed1be5773baccd3129319c3c Goran Flegar 2018-05-21 Add range example
+79868f1f17b8163046ca033237df81092c09050f Goran Flegar 2018-05-21 Fix non-square matrix bug in mmul
+cc0b46196ec7ea3f060a3df8b41316694f57b604 Goran Flegar 2018-05-21 Add support for matrx multiplication
+66a72b384e5fb645ad93cd99ba5b2f6058fd744f Goran Flegar 2018-05-21 Add support for transpose operation
+3cc722a3a5da79b0a802f1e3e1eb8138a2265c5e Goran Flegar 2018-05-17 Add unit tests for subranges
+8d945c4ec626f4959063bc972a735a9014ca16a7 Goran Flegar 2018-05-17 Add range implementation with basic operations
+91688c25e6633d0078f1d826198a2b1621f10261 Goran Flegar 2018-05-23 Fix typos in CI config
+24374d1e68ffa95dc51cbf9850b3ebe94dee56cc Goran Flegar 2018-05-23 Synchronize master and develop branches from CI
+e7112176f056319e0cafde3f8720aa7be88fae33 Hartwig Anzt 2018-05-23 update pull request to new class hierarchy
+c0c7edc26e62800e7e8a30fc8a2ec38fec9c7af5 Hartwig Anzt 2018-05-11 add test for 150 nz per row
+e5453bdd9d3bce4a15eebb576e9a7be773a08372 Hartwig Anzt 2018-04-26 remove if-guard as not needed
+df60f637bc826ea78bc8b21da6cd760f04a41bb0 Hartwig Anzt 2018-04-26 requested changes
+304bde246f6bf515357e2e187cdc90877f09804a Hartwig Anzt 2018-04-23 add tests for large matrices for block-jacobi
+211aba17136d1d57a544990fe92ee0f26562d27b Hartwig Anzt 2018-04-20 try to use several kernels for block detection
+e6c0cd8b6b80114e56d19cf6fdf9ffbb83c7ad97 Terry Cojean 2018-04-13 add missing space
+7a339fc367dd1b9fa07de97886792497b84e6edc Hartwig Anzt 2018-04-15 add tests for supervariable agglomeration and natural block detection for large matrices requiring multiple thread blocks
+7fbdc974e1b815888aa57d873f42ecb14e5d4c45 Hartwig Anzt 2018-04-11 why does this fail? help needed!
+cc4f0b4a75a6ee5ab5ca7ee1a523727362bce3ae Hartwig Anzt 2018-04-11 typo
+6590fccd9e7952fa166328c49d37b9dcfaa051a3 Hartwig Anzt 2018-04-11 descriptive kernel names
+169956b2b4bc6dfc7cd356abfbc98cf4ecd2a0f7 Hartwig Anzt 2018-04-10 remove additional threads from sequential code
+bc9398cf0e07784b55081243c82b1ea0735cd296 Hartwig Anzt 2018-04-07 initial commit for gpu kernels for block jacobi pattern
+0f063805d43bce91bc5da435a2b788a5e49baa87 Goran Flegar 2018-05-22 Merge class hierarchy improvements
+697403b70474e85ebb2fd8882374bc35c9d57613 Goran Flegar 2018-05-22 Fix some minor documentation problems
+20caa27b12674c5cd0d35015ea341a253d53560c Hartwig Anzt 2018-05-22 Merge branch 'initial_ci_setup' into 'develop'
+f595cde40944bcb0c4b96c17e62ffcf0edc34c42 Goran Flegar 2018-05-20 Fix issues with shared libraries
+b1085249a7b7bd52fb40813919fb058721aea563 Goran Flegar 2018-05-20 Add GPU builds to CI
+ac31ba4a1e594a0d397455c81198f2f35b780d9e Goran Flegar 2018-05-20 Create YAML templates for stages
+50d4cbcaa1a3f26c4a76acfb8c6a58f7bee2f297 Goran Flegar 2018-05-20 Specify dependencies between jobs
+0c8f93abf3205455b9be96f990bd29cd16a1b232 Goran Flegar 2018-05-20 Add clang to CI
+ca9da6329991b60a4607e65fbd45799d1cf0202d Goran Flegar 2018-05-20 Add initial Gitlab CI configuration
+6a250b5a5e89ce0484ccd3ccfe7965ce225df887 Yuhsiang Tsai 2018-05-20 fix error detected by cuda-memcheck
+1eaa3c089b1464f6ac251b313857915219765b52 Yuhsiang Tsai 2018-05-19 Update from the latest ginkgo/develop
+7064e832ac36ac2cfe8d3f165cbbf7aa3f8a4023 Yuhsiang Tsai 2018-05-19 add advanced_spmv and its test
+17d595b78e244163287f0dfa7013d8bd89f044e4 Yuhsiang Tsai 2018-05-19 Implement COO spmv and add test
+cea1371c008e002ae757952935fd4e786743c5a0 Yuhsiang Tsai 2018-05-19 change name and add cuda atomic_add
+bbfe636f1ee82d7df99de5780dde1f0ca506c3ae Goran Flegar 2018-05-15 Remove useless reference to make_unique
+e85d576cba5bfb6ed6a33336aaffa39f7537ad0d Goran Flegar 2018-05-15 Fix bug in ELL calculate_max_nonzeros_per_row
+771dd164fa05a9537d7f953399564a189d5510c5 yanjen 2018-05-15 fix claculate_max_nonzeros_per_row
+714b4b64c87c06a2f2e1c4e78dee53ae75e21e7a yanjen 2018-05-15 add function calculate max total cols
+700a42929c923eaba7b28f03a4a9d24a6574d35a yanjen 2018-05-14 debug
+dd9898672c029e4e59b9367b92fc9c8dcf528bee Goran Flegar 2018-05-13 Fix minor spelling errors
+835335002a2bca5dd8b3d6fb3e55c54ad78940ec yanjen 2018-05-13 Merge remote-tracking branch 'upstream/develop' into SELL-P_matrix_format
+4647113979f05b7212f893c3d40caea917d11d41 Tobias Ribizel 2018-05-11 Add basic doxygen configuration files
+17695a6341489ed6d7541fff489acca199eb5fe3 tcojean 2018-05-11 Merge pull request #50 from ginkgo-project/bf-ell_read
+09c1e4e2542ac85428675da53a69fff4ff4b55cd Goran Flegar 2018-05-11 Fix bug in Ell::read()
+0fe1b657db0fbe196d54d8a2e33b60f74f288590 Goran Flegar 2018-05-09 Fix some documentation issues
+1df1ca72a9f509969045f5d8339a2dcb4698ac1a Goran Flegar 2018-05-09 Use one in stead of two asserts to compare size
+557954c9c6100524069eaef5013c107b08015bc0 Hartwig Anzt 2018-05-07 Merge pull request #48 from ginkgo-project/small_logo
+2bdc779a0e955a042ad04c478b5b8db0ac7cb6ca Goran Flegar 2018-05-07 Add unit tests for EnableDefaultFactory
+0f356f9e36300b06374e05fe61b2fd9f44721033 Goran Flegar 2018-05-07 Add tests for LinOp and LinOpFactory
+4e0596fc30472e6f0cb6503e4f334605d66ba4b9 Goran Flegar 2018-05-06 Update unit tests for PolymorphicObject
+94ea92ab14f8c84fb9977118be396a35c47ce04f Goran Flegar 2018-05-06 Add tests for dim
+b52cd9aa5ab276aa174685dd1c00db08ddffa5b5 Goran Flegar 2018-05-05 Add unit tests for temporary_clone
+0db0c68acfc7ec99f5903ee21b9390bdcbfd487a Goran Flegar 2018-05-05 Fix wrong documentation in matrices
+7cccd42d3a00a73e832d1f1bb00ee2840c11723d Goran Flegar 2018-05-05 Add documentation for temporary_clone
+de57d107cdd1e338603fe9b6a54455a29b469941 Goran Flegar 2018-05-05 Revert accidental replacements in comments
+4e4607a49d997d37c598327d5a5c368b32a7618d Goran Flegar 2018-05-05 Add documentation to abstract factory
+e15fcbdab660a022bb6c44591165b15b44a04882 Goran Flegar 2018-05-04 Update documentation for LinOp, remove size class
+8e729463aed0835607a9065e52f28f6d1055471c Goran Flegar 2018-05-04 Use dim structure to express lin op sizes
+0c6b6dcfbbd78724574eba1d260c425eac4fd0ac Goran Flegar 2018-05-03 Complete documentation for PolymorphicObject
+b616063c62d8989e292abd11d3ad17f614d76040 Goran Flegar 2018-05-03 Copy apply inputs to owner's executor
+88959d8ef6df6179ffde87eaf90553dfd8f91e54 Goran Flegar 2018-05-02 Use fluent interface for factory creation
+59780a6b06ddb50031787a2e745cc3d9b3641ec6 Goran Flegar 2018-04-30 Automatically generate FCG factory
+3c942cb5143564e0674a252e8e944d517b04c2fa Goran Flegar 2018-04-30 Use generated factory in CGS
+25d00dc9d1cbec71e52849d6ab38ce91aa14b432 Goran Flegar 2018-04-30 Use generated factory for Bicgstab
+02f29e6c06575a6b62d254390abf7c0ae0b620d6 Goran Flegar 2018-04-29 Add solver factory macro
+ff94c5e2ae6d410c01d18a3163e7f2cfd6ca4bc7 Goran Flegar 2018-04-29 Automatically generate factory for CG
+08942b119bfe73e12b5f4db4f978a3841dc42384 Goran Flegar 2018-04-29 Use AbstractFactory instead of LinOpFactory
+a158c5826712e268be1fbde57b211bf6dea5c8cb Goran Flegar 2018-04-29 Decouple static create method from EnableLinOp
+4dafeb52332be2d561979f825cafc0570ca00e92 Goran Flegar 2018-04-29 Add default size checks to LinOp::apply
+ece2bbc321040844626d55e732e60eed33a2e656 Goran Flegar 2018-04-27 Implement LinOp using PolymorphicObject
+07da8fdcba77db3b3f6a4934ce8a1166adff8f7a Goran Flegar 2018-04-27 Add tests and interfaces for polymorphic object
+a3bb6e56ae372607708d3f1ddcc23e54847a3294 Goran Flegar 2018-04-27 Add initial implementation of polymorphic object
+51872d3c9ced2889609a0572ec16e0c643d6f922 Goran Flegar 2018-05-06 Merge branch 'bf-remaining_krylov_convergence_test' into 'develop'
+8aca0e2fb9e7cdc6d9a1a0caa966313862c56eb2 Goran Flegar 2018-05-04 Add small version of logo
+28a26452a194f14cd5865416d012eed0967bde0a Goran Flegar 2018-05-04 Merge block constructor for matrix_data
+5f6582bf66a46a153e6a0db8b01a93f726844364 Hartwig Anzt 2018-05-04 remove comments
+1b4ee41f63241dd9d67bfadbf953f5f353ff33d4 Hartwig Anzt 2018-05-04 make the checkered matrix a matrix generator. A matrix can now be initialized by using a small matrix block.
+be7eb5399c1a53e43575917170c442f830953270 Goran Flegar 2018-05-04 Merge branch 'bf-krylov_convergence_test' into 'develop'
+f651397d76faaee085c7ff609aebd551f1b11409 Thomas Grützmacher 2018-05-04 Bf krylov convergence test
+18b35e3fdf1111383e9c176692d993b436457d27 Thomas Grützmacher 2018-05-03 Corrected executor type in cpu, gpu and reference solver.
+26683105c6e302c8965735c6aca5ee475d780724 Thomas Grützmacher 2018-05-03 Changed the executor from the cpu cg solver from Default to CpuExecutor
+5084b0d2b47e2bb2723b06158b9df8d4b5d46a10 Thomas Grützmacher 2018-05-03 Added brackets around the statement in the reference solver implementation.
+70cb38de5080680e012c9c3c73af3f55dcf2ac31 Hartwig Anzt 2018-05-02 ensure row major
+74f3bdf4ad8161d0af32082f19c68add4ca413ef Hartwig Anzt 2018-05-02 ensure row major
+9ef923eead13800b07a0119c36cbeb3fd21c6760 Terry Cojean 2018-05-02 Merge branch 'truncated_float' into 'develop'
+76b50264c612a389816f8f88fe0dbecd4218c264 Hartwig Anzt 2018-04-29 Merge branch 'contributor-update' into 'develop'
+f655996b79dead3f44841ae7e7e4828f35f0dcf8 Goran Flegar 2018-04-29 Update contributors.txt
+e0d7def3e020b1c6dec3b00db589bdee0c80b61e Hartwig Anzt 2018-04-26 possibility to generate a checkered matrix
+233259d7e96eee1d22fabe1b428705b7b006f21c Thomas Grützmacher 2018-04-25 Removed empty line to make it consistent with the rest.
+6cb62c0facbb1967286cfe036528b992d7bd8867 Thomas Grützmacher 2018-04-25 - Added BiCGSTAB changes (from merge request) to the remaining solvers. - Left the additional tests of the remaining solvers in the repo. Renamed them because they do not detect divergence at the moment (but are an additional test for bigger matrices).
+50058c256cbebb260fc721000305f771271254f7 Thomas Grützmacher 2018-04-23 Added tests for the remaining krylov solver. Unfortunately, they do not detect divergence and (all) need to be changed.
+ae93df97ec9df43304c1e25621999cd9dbaec07a Thomas Grützmacher 2018-04-23 - Corrected use of stride and num_cols in gpu/solver/ cg and fcg kernels - Implementation of FCG and CG convergence-vector done (except for additional reference test) - Added include for core/base/math.hpp in all changed (FCG, CG & CGS) kernels. Needed because of remove_complex<ValueType>
+2f9dc31bfbd89ad4d9cbbb30d5c5066afc049967 Thomas Grützmacher 2018-04-22 - Corrected use of stride and num_cols in gpu/solver/cgs_kernels.cu - Implementation of CGS convergence-vector done (except for additional reference test)
+9cb30710257497d1b284a97a3a9e45462ce4905b Goran Flegar 2018-04-20 Fix bugs with half and truncated types
+ceca4205b5203dc464db1207b29b1e5ba796d62a Goran Flegar 2018-04-19 Add truncate_type helper alias
+f6d975bcfe31fc4fb5aeed823e6c534b08451650 Goran Flegar 2018-04-19 Add documentation for truncated / split types
+8818229ce2428aee746be2488410b35530e3cbcd Goran Flegar 2018-04-19 Add basic support for truncated types
+ae1bda4c0af81b913725cc5e647344e05917578f Goran Flegar 2018-04-19 Merge branch 'bf-solver_convergence_criteria' into 'develop'
+5555b7f2a321a31846e13cb506ef5e4f0240c997 Thomas Grützmacher 2018-04-19 Fix for wrong matrix access in has_converged
+05d48f7744a449f98e732d0852d662bc50ae1f9b Hartwig Anzt 2018-04-19 Merge pull request #42 from ginkgo-project/generation_script_improvements
+671b196dca3e91e3335b698bc0af9117dc7f1b7a Terry Cojean 2018-04-18 Fix csr GPU kernels using }; after functions instead of }. Fix script detection of GPU kernel files (either .cpp or .cu extension).
+e0bc4f19b47e7b330ac14285439caa3a0a07a5d8 Hartwig Anzt 2018-04-18 Merge pull request #31 from ginkgo-project/memory_utilities
+878580cb1497e73a322e0e881c9e9908c9a80231 Goran Flegar 2018-04-04 Add gko::clone_to to utilities
+2fe3d32c4d95c0dd55ea7ef5af7d98f8d267f52a Goran Flegar 2018-04-04 Update examples with new memory utilities
+8167d95c50e99ffada0b53011346dbd92718a44d Goran Flegar 2018-04-04 Add unit tests and fix bugs
+3ae91cae71bd61b0ccc3bbd95876ee7b9331e505 Goran Flegar 2018-04-04 Add docs for memory management helpers
+289b58f4fce4a37e9b1124cc9ae700bcd5a2d019 Goran Flegar 2018-04-04 Implement memory management helpers
+35e168ef0b126a48f2593eabe3ec82c6a0f45d90 Terry Cojean 2018-04-16 Correct awk regular expression.
+66a2891fa45ebb9f3b7ecad6c2da751fb99b661d Terry Cojean 2018-04-16 Try to fix the mac problems seen by Hartwig.
+7faff26a3c524851b104dd07147e43c7e95fc105 tcojean 2018-04-16 Merge pull request #43 from ginkgo-project/bugfix_multiple_thread_blocks
+c3ba3fa7c75299ba2b354196db939219eecdb39c tcojean 2018-04-16 Merge pull request #44 from ginkgo-project/fix_cgs_tester
+75e9f8f92627a7de20d46a3a1f0eb761ff88c584 Hartwig Anzt 2018-04-15 the executer goes to the end
+f2722e37bc049c04e3ba37359e14eab643bd406c Goran Flegar 2018-04-13 Merge branch 'logo' into 'develop'
+7da6c1a2b17338f15b938d1bcad008535f263731 Goran Flegar 2018-04-13 Change "Ginkgo logo' title to 'Ginkgo' in README
+0c721e35442935969b04e3b294574c3521651c75 Goran Flegar 2018-01-29 Add Ginkgo logo data
+358f7e0b21df3c683b0d22e67e25d7a34de3e9f7 Hartwig Anzt 2018-04-11 increase the default vector size testing the GPU kernels for the solvers
+73710f130346a4aee4e9cccbceb5d7b0907f7b89 tcojean 2018-04-11 Allow automatic modification of common_kernels.inc.cpp and add a switch for the automatic modifications.
+f4b771920ba85eee5080f1083ba7c5498a6e263f tcojean 2018-04-10 Add multiple improvements to the algorithm creation script. Automatically comment old code, set NOT_IMPLEMENTED and add TODO items. Also automatically edit the CMake files to add the generated files.
+189ea4b894193ae7ef99d7c41ea5ef279b2d7a1e Goran Flegar 2018-04-11 Merge CGS GPU kernels
+b35be8e0b671cb585221f638f4fb6bbf8992e119 Goran Flegar 2018-04-10 Merge fix for wrong file names in examples
+6a4cb8e39ac9408c6b77a1f605eaf314e583d063 Hartwig Anzt 2018-04-10 this bugfix resolves the reading of invalid data
+49c10c4d7fb158c71cd894da989df6d369e7d61c Yuhsiang Tsai 2018-04-10 Automatically detect GPU architecture flags
+c3263a8914ce7df200688627aa8dca0e5e6c40b8 Terry Cojean 2018-04-09 Merge branch 'sparse_matrix_generator' into 'develop'
+754d22ecab66ab85a9fb3ce400eb26b0b773738a Goran Flegar 2018-03-26 Use custom nonzero structure in matrix_data
+2eeeb94626b744346c4bf7ee1f6f4d866bec21a1 Goran Flegar 2018-03-26 Add block-diagonal matrix initializer
+553248fc16428c304f6f529f549676ec4408db28 Goran Flegar 2018-03-26 Add various initializer for matrix_data
+c03c936d1807edcca0c7cee8174422b9816a2115 Hartwig Anzt 2018-04-06 Merge pull request #20 from ginkgo-project/multi_gpu
+87eef5cd1f29a0bf9d125c84c23df6c2fb364d0c Terry Cojean 2018-04-06 Merge branch 'matrix_data_v2' into 'develop'
+e2bfe13aa75ff4c8bc798d641f4240b78d6470e3 Goran Flegar 2018-03-26 Fix bug in block-Jacobi write()
+411bb37c13b9d07f4b2c399e34a5754ea7fe80fb Goran Flegar 2018-03-23 Fix compile issues on Jetson
+e1e1a7440ff83255250434db1944d9d983d81c1f Goran Flegar 2018-03-23 Incorporate @pratikvn's comment
+abc7147e135ce9569f26d85425536031a917d632 Goran Flegar 2018-03-21 Update matrix_data documentation
+50e3131e8a59788e17a2545203cfd5d103793103 Goran Flegar 2018-03-21 Use matrix_data instead of Dense for assertions
+d344be4dd07ed3aa3d86e76617a092548c84313c Goran Flegar 2018-03-21 Improve memory usage of generate_random_matrix
+310e7faf64a8e2d0b140b6bdac8432350263c53c Goran Flegar 2018-03-21 Add WritableToMatrixData interface to block-Jacobi
+5a0a48d77be6381716347ab6ead154ca75820d86 Goran Flegar 2018-03-20 Add WritableToMatrixData interface to Ell
+5cba9df1a884e5311d3a8d59db02ec0ac9a33fa3 Goran Flegar 2018-03-20 Add WritableToMatrixData interface to Coo
+27f9bb24a1f643837dba3688da206417669d3322 Goran Flegar 2018-03-20 Add WritableToMatrixData interface to Csr
+0f1cd84ee68526d7e62df7cd9d8be2f03555dbd2 Goran Flegar 2018-03-20 Add WriteToMatrixData interface to Dense
+49c6a4027167785140aeb725de4abaf458a777df Goran Flegar 2018-03-20 Decouple unit tests
+c7db3564cbded60e514b6d9c64fac2f1800aa012 Goran Flegar 2018-03-20 Improve matrix reader design
+3ee1a005322c62c110f19a72372e67b88532c21b Hartwig Anzt 2018-04-06 allow negative numbers like suggested by terry
+1c6b69aa24f19678471778a586e5e6e594040671 Hartwig Anzt 2018-04-06 added solver application as suggested by terry
+a3bae522cdbb79a54dc36055555424bf51f32b6d tcojean 2018-04-05 Fix brackets and put the device_guard class in an anonymous namespace.
+7937fc1265ca63569d32da45c271093e599957cb tcojean 2018-03-15 Fix tests according to @gflegar's remarks.
+85e277bf6604accaf285b31e2a741cdf336977b6 tcojean 2018-03-14 Improve Multi-GPU tests.
+a11876911976716fdd13cb5bf697d3c3de74a1ce tcojean 2018-03-14 Cleanup forgotten leftover macro.
+023d8cce2316a2b009ef7e0edfed1506b64989aa tcojean 2018-03-13 Remove unused exception.
+4ed40a9d87fb24bcd1c8aa06d0e1407a996ea054 tcojean 2018-03-13 Take into account @gflegar's comments.
+424f949e8e152a1f5cfe3b09ad6ea39e8538036b tcojean 2018-03-02 Add a working multi GPU support.
+2a2853ceb8d103c71c3e06d853398804f3eb0130 twc 2018-04-06 Uncomment initialize kernel.
+7b147a12e8e9b83cde7bd2dcb7d87c2d92accfea Hartwig Anzt 2018-04-05 add gpu tests
+cac77089a48e40f34f8ff23d236c04d2dd19ff97 Hartwig Anzt 2018-03-17 first version of cgs gpu kernels and unittests
+115ee1df5fe5c6d752f13e663c70a650e966501a Hartwig Anzt 2018-04-05 Merge pull request #34 from ginkgo-project/preconditioned_solver_example
+37d37430e6a9fdfd634a3f4657f9b40aebcce38d Hartwig Anzt 2018-04-05 Merge pull request #33 from ginkgo-project/bf-cpu_build_fails_for_cgs
+62ef76ce39c880871ec2ec6de2d4abb352e88ec4 Goran Flegar 2018-04-05 Fix wrong signatures in CPU version of CGS
+cf02ca2f384f37d3d378384ec3ac1e815bf83baa Goran Flegar 2018-04-05 Add preconditioned solver example
+493de2c1450112f420e4d1f5e95cfffee296f2a9 Goran Flegar 2018-04-05 Merge pull request #22 from ginkgo-project/initial_cgs
+aac6eb5d67ad3bb7db3b28cc4c33916802e7c45d Hartwig Anzt 2018-04-05 Update cgs.hpp
+04e9c1b6fc59c39b560f15aa587fb037c176274c Hartwig Anzt 2018-04-05 Update cgs.hpp
+d0f9b60bcc68b3bddb7477b4bbd763430490b8c9 yanjen 2018-04-03 Add SELL-P matrix format
+2957f467821ec6a9da949eb5fc7c2595a4ff4433 Hartwig Anzt 2018-03-31 changed include files according to standard.
+5b8b009425645270edcf86adc9729c0db3843787 Yuhsiang Tsai 2018-03-29 delete extra blank line and only use convert_to_coo for Dense->COO
+3cc8070c9ca8ee80a41139c73b1d4008857a4d71 Yuhsiang Tsai 2018-03-09 refine format
+b1c8b4079525b50ee0d6784f34838676a4c074c7 Yuhsiang Tsai 2018-03-09 Add Dense To Coo
+b9af422afce323a9513697bf2852fce0d06556dc Yuhsiang Tsai 2018-03-09 Add Coo To Dense
+20aa038a50fc4baec0c1c71c40ab0dee28fae34f Yuhsiang Tsai 2018-03-09 Add spmv of COO reference
+f7a94b5ea8327e33712fd11c8885aa27659ddd64 Hartwig Anzt 2018-03-29 remove blank line
+ace80dd95484ea1c01311f0e30583ed6ac3b323e Hartwig Anzt 2018-03-29 remove empty line
+4b9d5464e45565702ecd057d8b3f81ce913e007b Hartwig Anzt 2018-03-28 change test to nonsymmetric system
+48d88f2742c9bd6c50794a22fc7a7cd0a66d2756 Hartwig Anzt 2018-03-28 remove step 1 from cgs and rename all steps
+5593d148feb1295c93177fb7f3a10eabbd01a2b1 Hartwig Anzt 2018-03-28 reorder
+19d1b31db0b3e74a4f709d96746ccdeddb790eda Hartwig Anzt 2018-03-28 Update cgs_kernels.cpp
+1e886f1b822943e2909a716399bfaea2e667bb64 Hartwig Anzt 2018-03-19 add another const specifier
+a321ec68e4def39a59489f1e981d6eda8ed4c06d Hartwig Anzt 2018-03-17 I do apologize for blowing up this pull request, but implementing the reference kernels I figured out a bug in the core/solver. Now I also add the reference kernels to this pull request - as the interface changed and this would otherwise mess up things.
+ead8b031952659ecb88f53e1c7cfaae480ce991f Hartwig Anzt 2018-03-15 Update CMakeLists.txt
+6f7faeb50f88917d24c6558f99b9bed00caca8fe Hartwig Anzt 2018-03-14 changed some files
+f7945c3242c30289dbbad5f65cb75ba270a481a9 Hartwig Anzt 2018-03-14 initial cgs commit
+f18a9f52781592aca2ba203166acc10e98ebaf21 yanjen 2018-03-20 Add ELL GPU kernels (#16)
+3cbe5d4876af9995eb00fa42b7f55f96e28280c3 Terry Cojean 2018-03-13 Merge branch 'solver_precond_script' into 'develop'
+68b001eed9ef257366a5a835a10c8be35e807647 Terry Cojean 2018-03-12 Allow to use the script for matrix creation, and warn of the conversion mess that will appear.
+22a2d9799f819668ebc8b4c0b9c0ea9ddc21cf24 Terry Cojean 2018-03-01 Prepare for benchmarks but put everything commented.
+745f3a84f0c6d66317dc30e3ddf50dfc7fd8befa Terry Cojean 2018-03-01 Notify there could be bugs with the automatic replace.
+96b8f34fe45df36872309d3edde7cfd4cded2b09 Terry Cojean 2018-03-01 Coherency in script exits. Also make the script executable.
+181066d87cc0492265bbf33bc46f066b6f5a13e2 Terry Cojean 2018-03-01 Improve help.
+5632e2a788538c5936230c17f86dfe00054bf07a Terry Cojean 2018-03-01 remove old template files
+072ba6d33c6f0179ffb85f3243d19c92e648d704 Terry Cojean 2018-02-28 Improve argument checking
+af935ea91a124e431a8e0a9ceed076a862e126ff Terry Cojean 2018-02-28 Improve help.
+e0b8ec9f12062e35891cfc2a322a22672fe0c81b Terry Cojean 2018-02-28 Review the script to allow creating a new preconditioner or solver from an existing one.
+7058db82a277dd2b6b1a6007297965abf061cff8 yanjen 2018-03-07 Change padding to stride
+388a07e653c2e112b54a796c95af2a778beb1826 Goran Flegar 2018-02-25 Move default_converter to types.hpp
+1c055d15b5676f3bf44da89c283ba135a6ee3bd4 Goran Flegar 2018-02-25 Add half support to std::complex
+602272c03e4778ad1db8cea5594b3f84a9dbf1e4 Goran Flegar 2018-02-19 Remove commented-out code
+2c4d14250aeaaf3bc71f80fa11abf7a5486f993a Goran Flegar 2018-02-19 Implement adaptive apply and conversion to dense
+ebf3602d700bf49780c098baf1f6f07a95057cbd Goran Flegar 2018-02-15 Add implementation of adaptive generate
+200e242c6a38a2f3e51190369eb204a2fcae1c7a Goran Flegar 2018-02-15 Add block precision parameters to kernels
+19a1c548b1cd1364821ef4c833a0327ad1c04c1b Goran Flegar 2018-02-15 Add placeholders for adaptive kernels
+46970e1a7474b1ceb7050a7a1bd4ea0761c2d42a ginkgo-bot 2018-02-27 Merge pull request #15 from ginkgo-project/update_contrib
+eec6f81025f253a0d467c6e2305348524fdeee9e Hartwig Anzt 2018-02-27 Update contributors.txt
+518288546f6e40c513d1aa10b14c6970d17ee701 Hartwig Anzt 2018-02-23 add Mike, Erik, Mark to contribs
+d8380305f4135e7c4f571053905fdbf4c471778b Yuhsiang Tsai 2018-02-23 Ell reference (#12)
+0e353294c269254eb3f1af9f4a0710ad7f30dc2c Hartwig Anzt 2018-02-20 Merge branch 'half_precision_support' into 'develop'
+969491202632c653c88c0462a7dbe40d03568bf6 Terry Cojean 2018-02-20 Merge branch 'COO_format_from_CSR' into 'develop'
+b896de10c037a791c9b2d72186db4870d355a15b Terry Cojean 2018-02-20 Take into account @gflegar's comments.
+c0f40da4e155cd9b802edc93c66b2b1cab37622f Terry Cojean 2018-02-20 Remove std::move() for testing purpose.
+bbf093a79c49955e8b3c76245ecbd006ed98772d Goran Flegar 2018-02-20 Improve half type error handling and readability
+079ba7c45b65d458f8be26993dec41276246c65a Terry Cojean 2018-02-20 Fix @pratikvn comments.
+4067518cdd11a01e69341d30f026e3a00c236b0a Terry Cojean 2018-02-19 Fix conversion functions with the use of components.
+57b1e8941cc2e596c32c45c252fe590670136615 Terry Cojean 2018-02-19 Merge branch 'adaptive_block_jacobi' into 'develop'
+429389827dd0af6250726ce5562fa48c623d8dca Goran Flegar 2018-02-19 Update docs
+bfbabd589b0098e2dbea67b4087976e11450c345 Terry Cojean 2018-02-05 Fix GPU compilation.
+9c6d2e42424f44148bc65b23a629ad13b2cccf49 Terry Cojean 2018-02-02 nit: inconsistent spacings
+20290260c67161b37466db6b1026e5b8adc37d7f Terry Cojean 2018-02-02 Use only one conversion kernel for COO <-> CSR only to convert row ptrs <-> idxs
+ec8a8d3305a7a38e2243b78bca5f2654d86bf7e4 Terry Cojean 2018-02-01 Add line which went missing.
+b7290e40c324f3596b1cc5a9ed88e00046c175ca Terry Cojean 2018-01-31 Add CSR conversion to COO
+d8f278fedebdfe9aafacb359317aeb5347905d55 Terry Cojean 2018-02-19 Merge branch 'bj_gpu_kernels' into 'develop'
+943a61360e6f4316180a42eda6fef0a285fd617b Goran Flegar 2018-02-16 Refactor half implementation and add unit tests
+8dc417a6f1f7b3eb6fab9f4e64ee16bc1e138aec Goran Flegar 2018-02-16 Add initial support for half type
+7a9ae216a10e5bc6b0fb004e11f8217f03a1fab2 Goran Flegar 2018-02-13 Incorporate @jdrzaic's suggestions
+085904fe3bcec6d13b12acc7c31fc11d5b85b5bc Goran Flegar 2018-02-09 Remove device asserts on mac
+1696ffd6265e269d2796a1a700edb5e83e896a7e Goran Flegar 2018-02-08 Try fixing link errors on mac
+f129f49f44bb9e43109ca6fce82a009d857e9d56 Goran Flegar 2018-02-07 Remove code duplication from shuffle wrappers
+34437cda0b2bce84728f75e3e67e1dddd84fbdff Goran Flegar 2018-02-03 Fix problems with older CUDA versions
+a3d79d6eaa10d42b40ea1c93f379baaa47b0420f Goran Flegar 2018-02-03 Properly handle no suitable kernels exception
+f1734c9f2a1ded0bdb82473e9fb5a52f3b64b77a Goran Flegar 2018-02-03 Add docs for GPU building blocks
+51a9b29cf5b170fdaca101ac1752088bcb032bc8 Goran Flegar 2018-02-03 Refactor block-Jacobi kernels
+0a73f55bdb72d93a9eef6ec066938d34a1f4a3c4 Goran Flegar 2018-02-02 Fix CUDA's naming inconsistencies
+f4d30f65cc13e16f01664387c503c11a84e6626d Goran Flegar 2018-02-02 Clean up low-level Gauss-Jordan GPU implementation
+23184799830784728b0cbac2b115d5b368388876 Goran Flegar 2018-02-01 Extract kernel selection code to separate file
+f5fd289d3b22ae30736c3252366c46fdc7aa7950 Goran Flegar 2018-02-01 Simplify kernel selection code
+fb2b07f42d948286373afe4b663d8f14549914f2 Goran Flegar 2018-02-01 Add complete apply tests for block-Jacobi
+e2f75a6e95fe289f6f880407f9a16356729c846a Goran Flegar 2018-02-01 Add list constructor to Array
+5054842f23d50cc00f7b63fe57db6e96dcae60a4 Goran Flegar 2018-02-01 Further simplify unit tests
+901ee6e0bb73961b48229c157a6cdd687d37d66a Goran Flegar 2018-02-01 Add block-Jacobi application
+cd17952190aa4a07094cf063214790a4db2a0103 Goran Flegar 2018-02-01 Simplify block-Jacobi unit tests
+005695613fd8baeccd8cee016664b7cca6733084 Goran Flegar 2018-01-31 Add initial unit tests for GPU block-Jacobi
+3fd591ba9ffa0ee3cb6b7a624e5d7663fb2dec18 Goran Flegar 2018-01-31 Add UninitializedArray class
+d75911a0ac3bfaa69581166c24482a2470df29f5 Goran Flegar 2018-01-31 Add initial implementation of GPU block-Jacobi
+dca77fed9153bec9fdadaa3176f88027db8f3df4 Hartwig Anzt 2018-02-15 Merge branch 'CsrTranspose' into 'develop'
+4e8fd0664b949232a5df53442a5b205988abaddd Goran Flegar 2018-02-15 Fix bug in adaptive block-Jacobi generate
+c06486722eb40010aac7521cbc8fe6e715b54f3f Pratik Nayak 2018-02-15 Adding a anonymous namespace
+5481227ffde9b50f3bd9abaec53973a3149ec966 Pratik Nayak 2018-02-14 Spacings and clang-formatting
+97b9bac7917c7af86f162a695889551dc2949028 Pratik Nayak 2018-02-12 Improve the reference test
+602efc73d9e32d19c21d6bc78a9c61adc5cc2af0 Pratik Nayak 2018-02-12 Formatting
+bbccbb1dec2781c79c45a9d180e40a5f8f9b17d4 Pratik Nayak 2018-02-10 Bug fix in convert_idxs
+e75bef904fc381fe09c33adbd9eb05c192fc6e7f Pratik Nayak 2018-02-09 Update README.md for gcc version
+74f4b384f9db3958e960d4db114a4a5fb05f09cd Pratik Nayak 2018-02-09 Fix memory leak and improve test matrix readability
+f5e6f54c709294f8bd087c4b7baec8b4a239f454 Pratik Nayak 2018-02-07 Improve reference Csr transpose through @gflegar 's suggestions
+9af4fa60f402c48d85e3dc1bf15854de149a51fd Pratik Nayak 2018-02-07 Corrected csr gpu kernel test
+5e5e2fdd09f2ae2d5c6a0318fb41114fe447f338 Pratik Nayak 2018-02-06 Refactor transpose tests
+bdd19fd1e0d21c1d2d26fe6cad81a964c97d3ff2 Pratik Nayak 2018-02-02 Spacings
+3f9def3e13a1d9c1d7fbcf5639da8addd6d53731 Pratik Nayak 2018-02-02 Conjugate transpose tests
+cb0ecfa8b1448c4154bbb7aa4a30bd52b09c98f0 Pratik Nayak 2018-02-01 Gpu csr transpose with tests
+054e30805e1cf27187f57ea6dfffaa747c16dcde Pratik Nayak 2018-02-01 Reference csr transpose kernels with tests
+41e8c150deffc1dfb465d16e1d045ddcf988f153 Goran Flegar 2018-02-15 Clarify adaptive block-Jacobi documentation
+d7a47925a93eb042942c8b761a7d4e59313f5d09 Hartwig Anzt 2018-02-14 Merge branch 'update_templates' into 'develop'
+c56b3b3aebd2b8fbda38f8f5c35cd22cb5f9cf9f Goran Flegar 2018-02-14 Fix dependency updates
+623750ab315f4487a21fe0df6ce253e04d1ce347 Goran Flegar 2018-02-14 Add unit tests for adaptive block-Jacobi
+2fe148947cd3955addc10148db4aabbc11cd9b43 Goran Flegar 2018-02-14 Add adaptive block-Jacobi docs and TODOs
+099e0aeff22f268239445fc5e3ca6552fb3c8bf7 Hartwig Anzt 2018-02-12 update templates
+d56f09c452981f5cd87b81a1cfc65addd91c1d2e Hartwig Anzt 2018-02-12 Merge branch 'develop' of gitlab.com:ginkgo-project/ginkgo into develop
+52ded0654cb0a7c55ca0881d28780830aa672689 Goran Flegar 2018-02-12 Add adaptive block-Jacobi class
+a6257d07fab2560ef1e6d5142d66dd8ebebcd213 Goran Flegar 2018-02-09 Fix CPU module link issues on mac
+f9d079f12ac2175c381092cbef1430fa02bb2ffd yanjen 2018-02-12 Add ELL format classes
+241a3d42343eed91dd60a93a98accc8ab99b76f6 Goran Flegar 2018-02-10 Add AdaptiveBlockJacobiFactory and tests
+1c9b6e747915c4a184a49d9bc4f3d296fa75fa84 Goran Flegar 2018-02-10 Crete common block-Jacobi generator class
+7246dd7ba7f7dd20bb2fbd8cbfb5cf68caf5b504 Goran Flegar 2018-02-10 Extract common block-Jacobi method to base class
+619e84e271676eb97957789a05d8ed396ca5c135 Hartwig Anzt 2018-02-09 Merge branch 'mac_cpu_module_issue' into 'develop'
+39a7e7e2d11084503ad9b3b9be0e9b87ba4aa130 Goran Flegar 2018-02-09 Fix CPU module link issues on mac
+8a155e69252c2fc12c0ab283a4a109589b041016 Goran Flegar 2018-02-06 Merge branch 'bf-assertions-segfault' into 'develop'
+98607c62269f33fc05d92eb4773e39a897a7a625 Goran Flegar 2018-02-05 Fix wrong expression name mangling
+b258faef6079abc521ece1ff3672e91d1b0fbd7a Goran Flegar 2018-02-05 Fix segfault in initializer_list assertions
+a10b50bb8365d9956f7c5e31c699882e2e9ccb96 Goran Flegar 2018-02-05 Merge branch 'cmake_cuda_flags_fix' into 'develop'
+4dfe6df45f5e8f8b5a331d0f4a05942378ef5893 Goran Flegar 2018-02-05 Fix bug where cmake overwrites cuda flags on CUDA8
+95a3e93044df828bbe4f0a7d67ff4b374dfdf216 Terry Cojean 2018-02-01 Merge branch 'bj_to_dense_conversion' into 'develop'
+4fb5c52b797c6a0f515c717522c8e76a3f544ecf Goran Flegar 2018-02-01 Merge branch 'COO_format' into 'develop'
+deae507562908d0169fbe0803bbe56307e4c7cce Terry Cojean 2018-02-01 Fix compilation and small mistakes.
+254dd0277b9399afe9b8025ee18db4bc4837b20e Terry Cojean 2018-01-31 Fix CSR conversion test and notably the algorithm which became wrong with the recent cherry picks.
+a3a867e475fab069267f22c8d8d4bef8f4435a4a Terry Cojean 2018-01-31 Change COO class comment
+4f4152c6d86e76fc6922e223e4bc7b9d51b56e0f Goran Flegar 2018-01-31 Add unit test for conversion to dense
+abfad4875a6bef93e5e77c2bfb4e4d4ba392ff21 Goran Flegar 2018-01-31 Add reference block-Jacobi -> Dense conversion
+575e8a8fc1fa986c27d634572aa0b51ec6cda305 Goran Flegar 2018-01-31 Add ConvertibleTo<Dense> interface to block-Jacobi
+bddd3531f8a14f75e0960ee1a28b23a4eaff4875 Terry Cojean 2018-01-31 Fix the other comments
+364913b0014acd4158f6556320e00f6ec0991f09 Terry Cojean 2018-01-31 Fix @gflegar and @hanzt's comments.
+25364e3d962fc759dd4b28f221d65a3d78bd03c4 Terry Cojean 2018-01-31 Cleanup apply and one useless line
+841a1ee2d9531ad3a202b2b1921262e6b7c3b4fe Terry Cojean 2018-01-31 Add the COO files.
+6ef9ea070d905021fbfd56240481459ba7712cc6 Terry Cojean 2018-01-11 Add a first COO format support. Main features are conversion to CSR and related 'COO', actually 'CSR' kernels.
+54224daaae6d73dd5d273127d8fdf70758e87f09 Hartwig Anzt 2018-01-31 Merge branch 'improved_assertions' into 'develop'
+c398a77958015e826b2b0ba2d94acbf41e058437 Goran Flegar 2018-01-31 Simplify unit tests with new assertions
+3956a78618f3daaed65c0f82818ea0e43b5c5a8f Goran Flegar 2018-01-31 Add unit tests for new routines
+0385d0d1e75489ce599812ce9811c83204fdcde3 Goran Flegar 2018-01-31 Improve matrix assertions
+f0aee791d45b09e3cfe122d8b3b72589b4643cbe Hartwig Anzt 2018-01-30 Merge branch 'overhead_example' into 'develop'
+c0b2cfb47d8635cec49763af675fd80d23a6d521 Goran Flegar 2018-01-30 Add optimization flags to overhead build script
+b41828debd1da8fba5a8142f3f154e3c1f7caf1e Goran Flegar 2018-01-30 Add overhead measurement example
+25ebc36a7fc0bb39fdfcd4ed82ab62bbb7bf009d Goran Flegar 2018-01-30 Merge branch 'preconditioner_setup' into 'develop'
+a24d5b3ec85666fe7087bec4a2cd1a15e5b740e0 Goran Flegar 2018-01-30 Merge branch 'bj_reference_kernels' into 'develop'
+c8e00f774f053bb61a1cda61fda88a136e3db001 Goran Flegar 2018-01-30 Add tests for preconditioners
+315850e97643f3033dde5ad5932011dff46a22dd Goran Flegar 2018-01-30 Add preconditioner support to Krylov solvers
+47160d89a051d53187d6e0fc82d2da5a21a93cc4 Goran Flegar 2018-01-30 Add identity factory
+008ffd2ece0a3edc096754a53d0281ad066b5949 Goran Flegar 2018-01-29 Add Identity matrix
+83ffa2e104381a7e41b29b0df3d0371d1a731495 Goran Flegar 2018-01-29 Check for square matrix in BJ generation
+60a1d74986eb72df46e33a5766dc318212f5202f Goran Flegar 2018-01-29 Refactor diagonal block detection kernels
+21ff601b249d12b7f02c3ab9f5a8f5e24544bbd1 Goran Flegar 2018-01-29 Add the executor to kernel parameters
+466431fa47086a09c88a5a9b35d888374494d5d1 Goran Flegar 2018-01-29 Add @hanzt's diagonal block detection
+4d42be2b3f3c75299bcea3fdfac7965fa90c9ab3 Goran Flegar 2018-01-29 Add block-Jacobi apply reference kernels
+23ee5d5306f66beba9d3ee7aa7f940c67313ddac Goran Flegar 2018-01-29 Add block-Jacobi apply stubs
+bc98d41d0821f28d5505a9bc65d3e8c11eae08d0 Goran Flegar 2018-01-28 Add tests for block-Jacobi copies
+ca97edf2801b16bd6ca072c7c2b0d7bd632ea6b6 Goran Flegar 2018-01-29 Merge branch 'lin_op_enhancement' into 'develop'
+d3ac7a3c4b728fa9ff87a3659120ef11bdc00d0b Goran Flegar 2018-01-28 Replace explicit create with default versions
+b3c39d99445ad9341dc99f8d0e94a80e37c0af1d Goran Flegar 2018-01-28 Add default implementation of create for LinOps
+616d0ccb3464945e7b00e67c33eb9e29c0c9fd44 Goran Flegar 2018-01-27 Add suggestions from @hanzt
+d373b19eb1fa2798e57dc65ed6a29d4a1601e99f Goran Flegar 2018-01-27 Add docs for BasicLinOp
+fbd7c5fd77504bb442f3610aafa69f2e2ea37ddd Goran Flegar 2018-01-27 Improve clone and clear implementation
+ec614e6192e4cdf3214df68e87b29ed1b27ca2de Goran Flegar 2018-01-26 Use BasicLinOp in all concrete LinOps
+fc8df9d436d16c13e97a6eb796eee96d4ca600f6 Goran Flegar 2018-01-26 Add BasicLinOp CRTP
+5c2dff42dd172118d8c1d05a0b0ab592f25e7730 Terry Cojean 2018-01-26 Merge branch 'bf_templates' into 'develop'
+6c9b8b6e870f6f033724cf4c5477cc7b6874a450 Terry Cojean 2018-01-26 Merge branch 'bj_precond' into 'develop'
+a76727629da60ab4051422137285a66ff2f6768c Goran Flegar 2018-01-26 Fix docs formatting
+dba0cd79ed3cc59f9859f451ff44c3196d12a264 Goran Flegar 2018-01-26 Fix wording issue
+14f65d5cea0701500f636c38242403f2d7258fb4 Goran Flegar 2018-01-26 Add docs for block-Jacobi
+84be1f308fbb660be8c5db9962a923fe78d01650 Goran Flegar 2018-01-25 Add unit tests for simple block-Jacobi generation
+b8edc5ae692559b422b3d12df05d74e30b48c140 Goran Flegar 2018-01-25 Add reference implementation of GJ inversion
+9b53d0644865b86371991835ae5029e440eaee15 Goran Flegar 2018-01-25 Add common part of block-Jacobi generate
+f23bb88049c3de65c077ff3b7558d9368d8bbdb3 Goran Flegar 2018-01-25 Add block-Jacobi kernels files
+735c24764365e5b635796f41f8af1385b265ceaf Goran Flegar 2018-01-25 Add block-Jacobi factory tests
+9f7fb895d6094114a012fa531995ada80e97c841 Goran Flegar 2018-01-25 Add block-Jacobi class
+6e2aa4e78a6a065b9767a1f4aee8c1baed58fd3e Pratik Nayak 2018-01-26 Merge branch 'fcg_solver' into 'develop'
+4786724bbebc09085466e47a7b3da6925702521d Goran Flegar 2018-01-26 Add noexcept and fix minor issues
+50b81d7c6dc54915fac58722595af8a963457d3c Goran Flegar 2018-01-26 Merge branch 'transpose' into 'develop'
+9eef4446a5a6d129c127022db554d9b4fa0f18cb Pratik Nayak 2018-01-26 Formatting docs
+bbb952b1fe7bcd1d61699b834d38746748704fc5 Hartwig Anzt 2018-01-26 remove check for p and q which are const
+a216d1fea06424411e67f7d542f5c432af2ae54c Hartwig Anzt 2018-01-26 fix CG problems
+df1d92f5de9204deecc33ef47bddd01dff5c55d8 Pratik Nayak 2018-01-26 Add ref conjugate transpose test
+7a58f6e60831ed37142bc0d75d87f3ca75ef53e8 Hartwig Anzt 2018-01-26 resolve Terrys comments
+b1ec2d60cbb2e8bf6f811ad59a997483110d1169 Pratik Nayak 2018-01-26 Add changes suggested by @gflegar
+cc513d65f6a56e000c3e76611e0caffc96f32752 Terry Cojean 2018-01-26 Make cpu, gpu and reference kernels and test files have the correct name by trimming that part.
+502041679d333e78db2c150599818b9f373ca052 Hartwig Anzt 2018-01-26 bugfix templates
+1567be0c544bbabb0e3412872cfd020447cab512 Hartwig Anzt 2018-01-26 add fcg solver
+12bd9dc032d7f0cdfdf58133876c0a2a95ca0d1b Pratik Nayak 2018-01-25 re-fix
+dc50700cba54a2e0f55707347840f5500898f821 Pratik Nayak 2018-01-25 Add changes suggested by @tcojean
+f58771803b5e0fda406734926238ef793d10a3d2 Pratik Nayak 2018-01-25 Typo
+36f84dba4bc2bccefe77cf2d9fc92d6191d00794 Pratik Nayak 2018-01-24 Fix for complex mtx comparisons and complex dense unit tests
+320f5a77a645bd56a5f6c3e0a79ba78aae29d93d Goran Flegar 2018-01-24 Fix bugs in transpose
+c10caf9465d0877c0938a7a23918cd0c256f2072 Pratik Nayak 2018-01-24 Bug fix
+419b01d86c58724972a3203f0ce14f5d2317a02f Pratik Nayak 2018-01-24 gpu transpose dense
+49f4525e223ef3fce3ae19ecab930c1cb59df3c2 Pratik Nayak 2018-01-24 Dense transpose ref kernels
+89049579fdbec2d289dad8d21db444b9d43cc09a Pratik Nayak 2018-01-23 Fix conjugate transpose
+a8d4988a2f643a930287fd29eae5b8879e59c398 Pratik Nayak 2018-01-23 Dense transpose reference kernels with unit tests
+62ac1008fadd4f3b3310a1cb811347f70aa7dd5e Pratik Nayak 2018-01-23 Add transpose
+1c3d191f9ad0d9d61f1eed7869f0a85ccd95b4f8 Pratik Nayak 2018-01-25 Merge branch 'bf_script' into 'develop'
+58accfde24d045a57738a4c30535e6af74df05a1 Hartwig Anzt 2018-01-25 Merge branch 'develop' into 'bf_script'
+e175d17bfcc6a2dd352c2c40faac9e03bc1f95c9 Hartwig Anzt 2018-01-25 update scripts to new cg solver
+ef79c0a2d18ca0aa73e28845bbb1f421c6c860c7 Terry Cojean 2018-01-25 Merge branch 'scripts_mac_portability' into 'develop'
+66b61f7ed01fe671a76933be2c8e59f4b6a580f1 Terry Cojean 2018-01-25 Add better portability to scripts for Mac OS. Additionally fix the help trigger.
+7c36e27d931ebc88da37a118f6695d2e41da55ca Hartwig Anzt 2018-01-25 Merge branch 'install_instructions' into 'develop'
+5a048796fdf8a48e1609cb26841a02af42710a94 Goran Flegar 2018-01-24 Fix instructions for MAC
+7102b9da00af5f234ee8c3de36d4f0d9904f7673 Goran Flegar 2018-01-24 Add build instructions to README
+9b1590926208f75448c758a394baa17b45fe00f3 Terry Cojean 2018-01-23 Merge branch 'bicgstab_gpu_kernels' into 'develop'
+f21410de9434f101f1d6aecb884353bc87fa45f1 Goran Flegar 2018-01-23 Refactor BICGSTAB kernels
+7e0806da9861c539d11c24bf307363eb58c91d0c Goran Flegar 2018-01-22 Fix bug in BICGSTAB step 3 kernel
+bd40d1ae823bfb705a3a0e6fd69c489a0aa178aa Goran Flegar 2018-01-22 Make every iteration of BICGSTAB count as two
+0d9e4947b8929631892c053f92a1b1ded4e87b86 Terry Cojean 2018-01-22 Ensure there is no segfaults in the kernels.
+2e1c645c2d95d01c06b287f3e9082129200c66f1 Terry Cojean 2018-01-22 Try to fix x using a different padding from the other vectors.
+b93325707c39da6478db2126d1f1b3649ab3de20 Terry Cojean 2018-01-22 Remove useless part of CMakeLists.txt.
+263520fe4c3107b302cf8a5e573df9ef1913cf70 Terry Cojean 2018-01-22 Fix multiple problems in the kernels.
+deb2db2c2f8d747101d366868445f038b2a0f2a9 Terry Cojean 2018-01-22 Minor CMakeLists update.
+677f2d0284cccfc71b3e6ea3b9511fa6cdef84ab Terry Cojean 2018-01-22 Way of checking denominators consistent with ref kernels.
+0fa1a946f5cadbb365c15c0382f63aed9ff56428 Terry Cojean 2018-01-22 Modify scalar's allocation.
+d103a59f3a0d59b7b74a866a98b59994cc6774e8 Terry Cojean 2018-01-22 Fix rebase problems, division by zero in kernels and improve tests.
+f50d40268939358554073a70108bb6c9e1ea081d Terry Cojean 2018-01-18 Create tests with one and multiple RHS. Multiple RHS does not work currently.
+36f66ddbc1f8353320b946fede862dea769a7ceb Terry Cojean 2018-01-18 Fix BiCGSTAB's apply and add an apply test.
+2e6d66cd6ce144a202e99021ccc393ac53a3a02b Terry Cojean 2018-01-18 Make use of some common definitions for cuda kernel writing
+52f07e5ecaf90fb624025386532d49445e7dd740 Terry Cojean 2018-01-18 Some more fixes.
+2e4317baefa955aa0b6ad0d328b19e5793080dc1 Terry Cojean 2018-01-18 Multiple fixes to make bicgstab gpu kernels work properly.
+86c6d16378dce925d43c0eb24da7b668aeae10de Pratik Nayak 2018-01-05 bicgstab gpu with unit tests
+70cffee1ef240bba6013dd44e2e8a96cee18aa03 Pratik Nayak 2018-01-05 gpu bicgstab
+c90b8cf25bdcb6266551aa6c22b5adba3c433acd Hartwig Anzt 2018-01-22 Merge branch 'bf-cg' into 'develop'
+2fe7e13c302ea1446c7878b93d50a8c24db656b6 Goran Flegar 2018-01-22 Fix padding bug in CG
+eebf970d39d1d00e40d63c1006a0c626c89c1f4b Terry Cojean 2018-01-22 Merge branch 'bicgstab_ref_kernels' into 'develop'
+dcf972215e1b6ab9c966e36d91c5932af7d1fbf9 Terry Cojean 2018-01-22 Change format of NaN fixes.
+866c412a892cf9559741e67ef4d8ae6f67b2484f Terry Cojean 2018-01-22 Fix commented out code and loop order of step3 kernels.
+795aba7dc4c5e61dfa249e9dbbcf9b280b6099bd Terry Cojean 2018-01-22 Put back the precision to the previous level.
+ce443670ae88ef4b04aabfe2025027bb34cfded7 Terry Cojean 2018-01-22 Fix issues with uninitialized values and improve tests.
+adca19e0443ff8976047a341d11bafd384c1f6c7 Hartwig Anzt 2018-01-18 Update bicgstab.hpp
+ebd3fe451485743d83e247075066bac9da94f105 Terry Cojean 2018-01-18 Remove rebase code duplication failure
+67c76974e3679688ff7fa8fbec915e35d5e4b85c Terry Cojean 2018-01-18 Remove unneeded code
+d24c1c90894a2f27d4df4efaf1533718cb0142f5 Terry Cojean 2018-01-18 Some fixes to make bicgstab reference work.
+53d270eac02bbaa1c33850f1fa4d338f17db34d1 Pratik Nayak 2018-01-04 Bicgstab with unit tests
+b02406588a2148fc3a996f2ac3ce2876e398b6ca Pratik Nayak 2018-01-04 Reference kernel added
+c43f13bd983e34d5b574b8bb16df9bb2a062a7c3 Terry Cojean 2018-01-18 Merge branch 'gpu_cg_kernels' into 'develop'
+4b173d4beaf269515dbe85d274423465b14b40c3 Goran Flegar 2018-01-18 Fix bug in cg initialize kernel
+442ce387e73f8f97a5d40a266f3c6991ce65e198 Goran Flegar 2018-01-18 Revert bicgstab_kernels rename
+f36815cad3dc1be49ea704f24375a0a612021d41 Goran Flegar 2018-01-18 Fix relative error in assert
+44a8954b42f50390b40636c12d8d0768d26e0dd9 Goran Flegar 2018-01-18 Use ternary operator to avoid branching
+d770ead1e22c7c45897ed33267286de00f770a3d Goran Flegar 2018-01-18 Add gpu CG solver unit test
+244de98cefea7609414f50a7d706bf2ff7eea5e7 Goran Flegar 2018-01-18 Fix some minor issues in cg kernels
+7faee8ef4c361a8ecb6cddf70d56413203b3cdd3 Goran Flegar 2018-01-18 Fix issues with kernels and tests
+26c14cbcff28a34869e4c0f0d27a757dfde26481 Pratik Nayak 2018-01-17 Simplify some unit tests
+56967389b4f82a2b3d395989caa820ebe87e5db2 Pratik Nayak 2018-01-17 Improve tests
+6338f2d3fa2b3fc9d32057d2c67616074b985fbc Pratik Nayak 2018-01-17 removing dead code and some fixes
+0e97db5f6556cf5f539c77ce39fd46dbe4e60009 Pratik Nayak 2018-01-17 remove comment
+ddad00a0dd29c901920c227769c876f81a3e8cac Pratik Nayak 2018-01-17 remove comments
+4e5f4f0aa10df56c752ad6d2cfcaa6c0729cc5c0 Pratik Nayak 2018-01-17 move ceildiv to math.hpp
+8d2dd3403fc554bf5015170cc30b7d99444318ea Pratik Nayak 2018-01-17 Cg gpu kernels
+36d5d84f72620843ecbde03553fd042990182f9f Pratik Nayak 2018-01-17 Base commit
+38d833ee5b6bdd62d6ea18853d7b78a240c6cc51 Terry Cojean 2018-01-18 Merge branch 'example_solver' into 'develop'
+1d45b4696c1f0c0c380c9e373dae705674d53e65 Hartwig Anzt 2018-01-18 Update simple_solver.cpp
+3038d1a060efc6e29451180b880f933105b980ca Goran Flegar 2018-01-18 Fix instruction for running example solver
+b25babb4becf52ed914a72faa9050358d211e64b Goran Flegar 2018-01-18 Remove -rpath from example build script
+018bc750162eaa17fe9377cdd86d0546dedcabda Terry Cojean 2018-01-18 Maybe fix rpath trouble
+e7538afad2785f8ad22f6e0cdc45b7b5ce893d35 Goran Flegar 2018-01-18 Add execute permissions to build script
+cb2ab4271d72fe560492052459f4473092589347 Goran Flegar 2018-01-17 Prevent bash.sh from printing garbage
+4e1ff21a34dc4d81fd23d3cfb046477c810e4514 Goran Flegar 2018-01-17 Fix error in example build script
+b089146975a2b99dbf0f9dc5bcb780a83f1ad76b Goran Flegar 2018-01-17 Add build script for the example
+8e36b852b35c14989dd008e99fffaffc0d9236d9 Goran Flegar 2018-01-17 Fix example compilation issues
+7c1b66bb245b92d9c78d036b2999c04ca2fae8c3 Goran Flegar 2018-01-17 Initial solver example
+a29cc72683746bbed3a95232d2be41b378c2e118 Goran Flegar 2018-01-18 Merge branch 'csr_gpu' into 'develop'
+8ad83df1a477c2f5a6f491d19307e4a610035e0b Goran Flegar 2018-01-17 Add missing error tests
+45aff1562d0d68518b3a7f6806d10a71e445d767 Goran Flegar 2018-01-17 Add unit tests
+44d2402e19ef716a72aa4301d7eec921b298aaf1 Goran Flegar 2018-01-17 Fix errors in CSR::apply
+d386dc288b7c48a7871899c7768231dc6b1669b6 Goran Flegar 2018-01-17 Remove duplicate definition of cuBLAS error helpers
+8aa19251efc802679f105101045e9d2234c03463 Terry Cojean 2018-01-17 Make tests run without segfaults, but the results are all wrong.
+0de0b4b954365785b2d50ad72aadb2b3863ba17f Terry Cojean 2018-01-17 Improve tests and cusparse function binding.
+9fa3b51227de8ec8ec11fde98fb19c0ec28b1140 Terry Cojean 2018-01-17 Add license to gpu csr test file.
+4935bf15afe9555ab77beba9f49545bee7c3c5c9 Terry Cojean 2018-01-17 First implantation of CSR gpu spmv, with wrong tests.
+8eb2d195089f284b9a27be1c147ddd5d718fb544 Terry Cojean 2018-01-17 Merge branch 'matrix_reader' into 'develop'
+3f48812e940ae9b1b4b836edd3c32fdf343cf5ef Hartwig Anzt 2018-01-17 data type vs. datatype
+8b138c4a660e8004f0b7129b1dc49f71e1c764fb Goran Flegar 2018-01-17 Add documentation for matrix reader
+6aea988d638bfb488274ee01532ef85a264918f0 Goran Flegar 2018-01-17 Add ReadableFromMtx interface to Dense and CSR
+2a61e0caa7e18df191d10bd5e8fc4ba5d26f1f7d Goran Flegar 2018-01-16 Add additional mtx tests
+34bc6cb8983136516e40cdcded8bb8261d9b5620 Goran Flegar 2018-01-16 Add tests for matrix reader
+c878479b26157cbb92ee9a46207fc300b34cd014 Goran Flegar 2018-01-16 Add initial implementation of mtx_reader
+922a88c65e2519dd04325b86e956e1c324b19eaf Terry Cojean 2018-01-17 Merge branch 'BiCGSTAB_class' into 'develop'
+e002466b5d4a5b49a1abb93ed0f1e0ff2c3d6cf9 Terry Cojean 2018-01-17 Merge branch 'csr_conversion_dense' into 'develop'
+6288e9cc434bc7a72b2eff5123836cefc52431db Pratik Nayak 2018-01-17 some simplificaitons
+057d239bd82a589a4fc38fb5091b44abd12b97a3 Pratik Nayak 2018-01-17 Rebase and .gitginore
+2b77ab0f78342a921ed3f8ca046da22cd179afd8 Pratik Nayak 2018-01-17 Move semantics fix
+b0e3ae11c035bc1a53ce4d7be73026b7b1c79080 Pratik Nayak 2018-01-17 Move fix for Apple compiler
+8488f7644ec97ca825845328279fbc08512ede44 Pratik Nayak 2018-01-16 Rebasing to develop
+ab17777dd758ceb4d76288b9ef31174a219a721e Terry Cojean 2018-01-17 Add cool template stuff to generate the conversion functions, hence minimizing duplicated code.
+18902f777ada7c6d5db2a3dcba057cc86ff7baa8 Terry Cojean 2018-01-17 Fix all conversion problems. Notably make this viable for GPU.
+dab9d578b4c8f3e8582c53b4f7da3a2bc85f4a1a Terry Cojean 2018-01-16 Add conversion kernels and test the conversion.
+bf6750f142485bbbc187412757d87ef36be0b7d1 Terry Cojean 2018-01-16 Preliminary implantation of conversion between CSR and Dense. Create conversion kernels for this purpose.
+06688d9aa78254f13227c68356f0f3304ee7d2ed Pratik Nayak 2018-01-16 BiCGSTAB class.
+a5f50fc24858b9b2b25e18f42b6507d54fa5dcb5 Pratik Nayak 2018-01-16 BiCGSTAB initial commit
+a0d224285ffca049524570dc538ef0974f3404e0 Pratik Nayak 2018-01-17 Move semantics fix
+1646bc25c1ada975806daeb593eb5bef25f243c5 Pratik Nayak 2018-01-17 Merge branch 'gpu_dense_kernels' into 'develop'
+2199360b0c5ddcd2a0803fa0210813aa14f39ade Goran Flegar 2018-01-16 Remove double definition of one
+4936ed2c040a47c2e27bef50fd6c988c82698137 Goran Flegar 2018-01-16 Add unit tests for dense kernels
+df96a0ee6f05ad4a1159b73c0256de17d28fc8a8 Goran Flegar 2018-01-16 Add unit tests for exceptions
+b9f781f682cb379ed2ecfb3cdf8fa9977d0377e1 Goran Flegar 2018-01-16 Add initial implementation of dense GPU kernels
+1fa63264f4acb6d8b35471b25c155d8bf07afb51 Hartwig Anzt 2018-01-17 Merge branch 'script_improvements' into 'develop'
+de03d05e4f17723d56df48a219a1f21ea4d3f8ad Pratik Nayak 2018-01-17 Move fix for Apple compiler
+c1664b98abb475ee465a893e278150588ea6dd7c Terry Cojean 2018-01-17 Improve both utility scripts. Fixes !52
+4dce76ba32d1c7c047447677fd315beb74a64959 Goran Flegar 2018-01-17 Merge branch 'patch-1' into 'develop'
+698465096301c8cd3fd7b133938d9f50242298df Hartwig Anzt 2018-01-17 Fix for Apple's LLVM
+b52a72121b9bb01d3a9a155c14a3a70056e8a49a Pratik Nayak 2018-01-16 Merge branch 'ref_cg_kernels' into 'develop'
+5319fa6f78bc5ba539044c53bad360e6cd5ab7e5 Pratik Nayak 2018-01-16 Simplify unit testing
+0fd8ab0c9d3d63765e76da57ff5b381bb42684de Pratik Nayak 2018-01-16 Rebasing again
+ce170650188ff43893090f70ae408d141f3f721b Pratik Nayak 2018-01-16 Rebase
+485c7aa200274d3f0a7819654b18331d1e72dde9 Pratik Nayak 2018-01-16 Some changes suggested by @gflegar
+743365f15faeb77938a065be548fd0041173dc08 Pratik Nayak 2018-01-16 comment removal
+ea8751877d54f41069f4e0f2c24a1f6495458a21 Pratik Nayak 2018-01-16 Reference CG kernels
+8c1f20d05d129387f1b7a1d95616ec843f0189ca Pratik Nayak 2018-01-16 backup
+09e0f66ba4219dc8421b191cc87e1adfee80dd9e Pratik Nayak 2018-01-16 backup
+cf41dc5fceab3bb00a1b150ce7bd4b9a9f028533 Pratik Nayak 2018-01-16 Initial commit
+d0f59375754f976ddaf3ad467003221ca79c977c Pratik Nayak 2018-01-16 Some changes suggested by @gflegar
+ecb62ff82c811e9c31a41371bc678627105101b6 Pratik Nayak 2018-01-16 Merge internally
+b56adf4c6c355761f9aa62f808d6c5664306d4c8 Pratik Nayak 2018-01-16 Rebasing to develop
+313b3215f7cb0f98d2260009dfc0e50bea522e09 Pratik Nayak 2018-01-16 BiCGSTAB class.
+f776b26e05012726e9318890a1957bb411f51882 Pratik Nayak 2018-01-16 BiCGSTAB initial commit
+b2ea471bcf4a4b8df41897ea6eb6f944bada4797 Pratik Nayak 2018-01-16 BiCGSTAB class.
+7ba83404f4efb20d2232441faabfdd57c8c0c99f Pratik Nayak 2018-01-16 BiCGSTAB initial commit
+5a9bc809f748eef1622900dca3b60f91ad4e2737 Goran Flegar 2018-01-16 Merge branch 'fix_csr' into 'develop'
+5cafd6d9cb48f73ba83ee19a351079006e83bdf4 Terry Cojean 2018-01-16 Fix CSR.
+09dcca77cbf081a2c83e85f91860e780f22d1352 Goran Flegar 2018-01-16 Merge branch 'matrix_generator' into 'develop'
+b54d11728726f074cad2187114129066fea312c2 Pratik Nayak 2018-01-16 comment removal
+7590906cb99586d1cbb464e52130b753f2ba5594 Goran Flegar 2018-01-15 Add documentation for matrix generator
+5babee47d9120be700feb9735509fcd200eb2a2c Goran Flegar 2018-01-15 Refactor matrix assertions
+219f1ae00d29fc1da2cf9da5ff224ebd83d111ae Goran Flegar 2018-01-15 Update matrix generator
+d2f4e0b705d7fbeb112715aa6ac74299d799a45f Goran Flegar 2018-01-15 Add initial implementation of matrix_generator
+60274358e3c671c3de9019985a86c1c60afd9ef1 Pratik Nayak 2018-01-16 Reference CG kernels
+5d436446721603b522c8b3268227a57849592731 Terry Cojean 2018-01-16 Merge branch 'csr_reference_kernels' into 'develop'
+a2c4f54a9f8e66a46439d4c05dfc2e684700734d Pratik Nayak 2018-01-16 backup
+13b6fec153c16aba76863f5ad866bc991e9c87a8 Pratik Nayak 2018-01-16 backup
+b9e276bee3b991dd97f7026f6d125db7468116da Pratik Nayak 2018-01-16 Initial commit
+975e3b291cc992d3b3f81a3e47e6c910d0d99531 Terry Cojean 2018-01-16 Fix common kernels.
+2daeb632e5d089af0c570b060938406ff35dc734 Terry Cojean 2018-01-16 Use as and fix assertions
+7085a0a8dc022a19582afe7b3de4e02bcb7c3872 Terry Cojean 2018-01-15 Comply with the new math format.
+c3c41975d885a1fe967fb819db55033ccbd4285a Terry Cojean 2018-01-15 Factorize hooks.
+d782105c0da962fad1c0e2337ba9c6ccd7d819c3 Terry Cojean 2018-01-15 CSR add license
+4985357c2e86c35c861f763afbe8d008ff1619b9 Goran Flegar 2017-12-01 Add type conversion and constants
+78ba0e5442d5bd9b60f0c9ea14822b77304a64d6 Goran Flegar 2017-12-02 Add reference CSR SpMM kernels
+4af5378937c26b37f4ced13ef666654ecce830a2 Goran Flegar 2017-12-02 Add stubs for CSR SpMV
+687c965305021804c547d8e4da3998a800afc230 Pratik Nayak 2018-01-16 Merge branch 'CGclass' into 'develop'
+1590221d0cfe29abdcea75a86915473cce3ba5fb Pratik Nayak 2018-01-16 Minor fixes
+f001db4ffbadeb455dabd799ef62001eae3f3df9 Pratik Nayak 2018-01-16 Merge branch 'CGclass' of gitlab.com:ginkgo-project/ginkgo into CGclass
+cc434a17e427a961eb49433936b14dcad0dc461c Pratik Nayak 2018-01-16 Third round fixes
+760227359c88839dcf0112dd728e8cfc5ba03bf7 Terry Cojean 2018-01-16 Delete diff.patch
+314e59d2d65ad38996a7ce8926a96ebc83de0fdc Pratik Nayak 2018-01-16 'as' implementations
+f4c9b185e563ce5cd52cbcecfec1a69a3dff060a Hartwig Anzt 2018-01-16 Minor: Please use capital letter in "Krylov" - I don't want to mess with the Russian Mathematics Society
+914676e3bfeea4ad24068133c2e5ff96084db963 Pratik Nayak 2018-01-16 Second second round of fixes
+8a1cf61e33f26982d4ca35b639e3d457d0cb210d Pratik Nayak 2018-01-16 Second round of fixes
+af655fc1f787c6cca8e7c737b6779879e598e68d Terry Cojean 2018-01-15 First round of fixes
+81dab7fc1700d75dc69ac03c4e675939a3a0c221 Pratik Nayak 2018-01-15 Comply to dense_kernels commit and add #undef for DECLARE...TEMPLATES
+f0353b2c331ac41b01cb888aac128ccfb07a0dea Pratik Nayak 2018-01-15 Merge branch 'develop' into 'CGclass'
+0816b4c530b6eccee31ab57ecf9baf3ee211385b Pratik Nayak 2018-01-15 Fix typos
+f7abd2f6cfe2cc9aec14831d8bac65127ba52497 Terry Cojean 2018-01-15 Merge branch 'ref_dense_kernels' into 'develop'
+f19910c4a0e651119e7333d2e7033e21b79f9a08 Goran Flegar 2018-01-15 Fix build issues
+5b7f6234f2405e0eb23d33bf24c0ba508ccee08f Goran Flegar 2018-01-15 Return value pointer instead of value array
+25f05ae69c4ae04508a939a750dec41c78450c13 Goran Flegar 2018-01-15 Add unit tests for dot
+7cbb4c425a223efe83728ce6ad23f25e00265fa3 Goran Flegar 2018-01-15 Expect row-vectors instead of column vectors
+84f3e2a35fdd55180416d366f4d60141e3aba880 Goran Flegar 2018-01-15 Add reference dense kernels implementation
+6a3e1dc2651c14970ee979270ba7ed6875c7eed5 Terry Cojean 2018-01-15 Merge branch 'csr' into 'develop'
+60c9dffc69ef8fb599408be71de8862a22804680 Terry Cojean 2018-01-15 Documentation fix
+f56f913344f451f7fa2f81bd1a4b9af9e69f2034 Pratik Nayak 2018-01-15 Cg class solver and unit tests
+463370669d33ecf99b75ea1358d3825478f93ba8 Terry Cojean 2018-01-15 Use better version of set_dimensions
+d2f962929e5cf4e3f9694b09c1492e92f95f1868 Terry Cojean 2018-01-15 More documentation fixes.
+bdad10b30efbbabbec7c321db340a9ea52827298 Pratik Nayak 2018-01-15 Cg solver unit tests
+8d9e71b01d8ba51b64d1d653c1a57e4eccce52b5 Pratik Nayak 2018-01-15 Cg solver class
+173e18254d16b7ecab33fcb2c80a3fc56699e373 Terry Cojean 2018-01-15 Add documentation for CSR.
+88f1a594aa265b516a73be7856438a63258a23d2 Terry Cojean 2018-01-15 use as for copying and fix call to get_num_nonzeros
+c0119ccd9365c10460e80291131a64eb66523619 Goran Flegar 2017-12-08 Add uint tests for dot
+4c77a6790edddbf766ab3ac64ee13b4dad338c99 Terry Cojean 2018-01-15 Convert get_num_nonzeros to get_num_stored_elements.
+349301ee182b65ced2d03680776a1b0e2c3a0132 Goran Flegar 2017-12-02 Implement utility Csr routines
+ff4bf88f1ff839ccdfbe181b313c0aed9a6652f8 Goran Flegar 2017-12-01 Add getters for Csr matrix
+77a317fa8735e08397c92897c1069ab1d8867cc9 Goran Flegar 2017-12-01 Add template for Csr matrix
+1513fe1c3a4ef744297eae8316d4db123e85f42d Goran Flegar 2018-01-15 Merge branch 'dense_matrix' into 'develop'
+e251e62ceb9bed24668f903bf8c8a5cd04b8346b Hartwig Anzt 2018-01-15 Merge branch 'solver_generator' into 'develop'
+df82acdae6fe035034e67f85afd4e71d965a6554 Terry Cojean 2018-01-15 Factorize several parts of @hantz's solver generator script.
+160cc107257f9c22df80ef168dcef2f403ac6ae8 Terry Cojean 2018-01-15 Add options description.
+eca5d52cb9b270d2433e382d9de158b403c6a580 Hartwig Anzt 2018-01-14 Update lin_op.hpp
+b236de49bbb8e6f74d13f658a590e029171dfd30 Hartwig Anzt 2018-01-14 Personal preference.
+3dec783ee6ea0a73d4a76e498698ac14348f2ccc Hartwig Anzt 2018-01-14 Fix some minor typos
+7a75db257b24662994c47d71eba2b3098ae96a8e Terry Cojean 2018-01-12 Made the script of @hanzt directory agnostic.
+eda27140a19916ba0b4ead39c40a4d9b3c8be5a0 Goran Flegar 2018-01-12 Fix build issues when ginkgo modules are enabled
+02c3151109b2eb3c34390532d7914b83c7952b13 Terry Cojean 2018-01-12 Add the new license formats to the templates
+5b6287de0611e2bbc7a6e058c32d4ed631771001 Goran Flegar 2018-01-12 Merge branch 'develop' into dense_matrix
+86c6726bb76aa5b6430ad980592e159f10b80bcf Goran Flegar 2018-01-12 Add initial solver_generator script
+b89d73ddd8ffb96f91b80255dacc15f97b345381 Goran Flegar 2018-01-12 Remove old licence version
+14f4efcfce89045f02420df4ec8ec245b7461211 Goran Flegar 2018-01-12 Merge branch 'GpuExecutor_implementation' into 'develop'
+92e5db91f7775f08096f2ea9f6619a056d10f4e5 Goran Flegar 2018-01-12 Merge branch 'develop' into GpuExecutor_implementation
+462c14af37281551b738ecc7342fe01ecbb48fb4 Goran Flegar 2018-01-12 Remove licences
+f5efb9a6f5e11238fc72c5036714c682b99a0dd1 Goran Flegar 2018-01-12 Merge branch 'license-additions' into 'develop'
+ebef507ed24722fec85fbc590f80c83358e76216 Terry Cojean 2018-01-12 Allow dev_tools directory to receive the license.
+3bbf93de1fd935d4b0daa94a5f10b87b2aec5dc0 Terry Cojean 2018-01-12 Fix the license formatting and add it to forgotten files.
+133b471409fcd12a6fde3283615e4d138da16d62 Goran Flegar 2018-01-12 Add initial solver_generator script
+6c05676c02f7e5f926ed7aaad80e2ccefabc722d Goran Flegar 2018-01-12 Merge branch 'develop' into GpuExecutor_implementation
+7ae123c4a19b8bfef3eb0052cdd7e2b6ee3f234b Goran Flegar 2018-01-12 Minor doxygen update
+753b2253f772501a9c40a5298253f66838dc6047 Goran Flegar 2018-01-12 Rename get_num_nonzeros to get_num_stored_elements
+9e6c2e5d15f88c6599034a2c4e7fa4c744fbdf57 Goran Flegar 2018-01-12 Merge branch 'develop' into dense_matrix
+ecd316a2dd856d852e1394b8211bbd3fe0b51f3a Goran Flegar 2018-01-12 Replace references to MAGMA-sparse with Ginkgo
+323562a7e971a649492afe523eec616c3cba1539 Goran Flegar 2018-01-12 Merge branch 'license' into 'develop'
+637fa263344ac58764d422663f3657d28a9e42be Terry Cojean 2018-01-12 Formatting.
+bba7b376580f190dd4f1d087bbcb069f1d751e63 Hartwig Anzt 2018-01-11 Update README.md
+6668a92adc6553582b075dd2e8c0c0ecef65174a Goran Flegar 2018-01-11 Merge branch 'develop' into GpuExecutor_implementation
+c851757ac47151598fbc6981af6b176e84244c65 Goran Flegar 2018-01-11 Minor style fix
+6ebe82526032f059ff0753204940d717a156bea1 Terry Cojean 2018-01-11 Add license headers for all files. Finishes #36
+f9484fccb2383bcbb826a84cbd3c66a73061ee39 Goran Flegar 2018-01-11 Add missing unit tests
+38cd45221dc1dd6123c3e65713116692a8ae7d91 Terry Cojean 2018-01-11 Better license format, thanks @pnayak. Related to #36
+3e6c6b056478065e0e8b6635965c1b85f7512dbb Terry Cojean 2018-01-11 Add the CMake target to add license and put a correct dependency between formatting and this tool. Fixes #36
+365e6143ef14c49b3179ece3cd3d1a30d6319bc2 Terry Cojean 2018-01-11 Add a LICENSE file and the script to format all cu, cuh, cpp, hpp files. The script is not integrated into cmake yet. First fix for #36
+2df151a6a4d85f162ea1e1c583032df35792f33b Goran Flegar 2018-01-11 Add docs for Dense BLAS-1 routines
+7b0a0ffc9d61f3440a16821e1b0b12329a7608d2 Goran Flegar 2018-01-11 Document boilerplate generation macros
+d80f34ac547d292315059f5061ed67a37b30c523 Goran Flegar 2018-01-11 Merge branch 'develop' into dense_matrix
+b1a512a312c345ffa3429a4561aa4c37c410ec3a Goran Flegar 2018-01-11 Add size checks to dense operations
+c394d9820dd39181cd3ce7efcf31bf0f084f4733 Goran Flegar 2018-01-11 Add size assertions
+d2b5046a00b199e08f19ab538cef783f3282e73b Goran Flegar 2018-01-11 Add basic utilities file
+bdff129ae97a7031ecfb9343740eee256e0e3f55 Goran Flegar 2018-01-11 Simplify implementation of dense matrix methods
+ec14c44830150bd48f125a993b72be572be2927f Goran Flegar 2018-01-11 Document matrix::Dense
+8be9bfbe27ede613ddf26c1f77bd3f2b0ca47888 Goran Flegar 2018-01-11 Fix LinOp docs
+f828eb748a91ff65b7e9815beab347bb185199ea Pratik Nayak 2018-01-11 Some Unit tests
+267be4ae3b9f576e7686e7cd1d201e51b80bd161 Hartwig Anzt 2018-01-10 Merge branch 'contributors' into 'develop'
+8e8daa87c311b522583747499e877420a7c538f1 Goran Flegar 2018-01-10 Add docs for GKO_REGISTER_OPERATION
+df0b4c1586d0e93250d07b0bcf418c0074e72475 Goran Flegar 2018-01-10 Add documentation for ConvertibleTo
+88358fa442511535e2b73eb16afeda526c4f6fca Goran Flegar 2018-01-10 Fix virtual destructor bugs
+a1b2c978af366d4af2009aa0ee39c5221029b822 Goran Flegar 2018-01-10 Merge branch 'develop' into dense_matrix
+b3f6e9cd51ff786d8deddf36677041e53871bc91 Pratik Nayak 2018-01-10 Adding unit tests to gpu_executor
+b9a5149bed56ddc421dc005ae0b97d03d0a115fa Goran Flegar 2018-01-09 Move synchronize to Executor
+aa76914f02094d19ce039f75e86b0d6503c7866d Goran Flegar 2018-01-09 Set up build system to work with ginkgo modules
+89f202e36b0681ed5732155ec8963bce01a39d9f Goran Flegar 2018-01-09 Add file with contributor list
+98d22714c9fc61fc42b6aea5998e28c627a71d26 Goran Flegar 2018-01-09 Update top level CMakeLists
+93cb83c8f44b671963728c4dc0913bef8675a6e4 Goran Flegar 2018-01-09 Merge branch 'array' into 'develop'
+0f75b905382cdca67bbb24301c84716c154213d6 Goran Flegar 2018-01-09 Fix issues suggested by @jdrzaic and @pnayak
+958ba71a7de343452446e1e4c12686a642d6e0e0 Goran Flegar 2018-01-09 Remove changes to DownloadCMakeLists.txt.in
+bf57ac08f61376f53b4fe646de4424d2f7d53c4e Goran Flegar 2017-12-06 Fix wrong class name in CudaError::get_error
+d3108272f8eb9e12ac84520b723917628aefb054 Goran Flegar 2017-12-06 Fix various issues with GpuExecutor
+222c98c8da2ddc94cb1d3c285042cdffa2201131 Pratik Nayak 2017-12-05 minor changes
+e170099781d3a97ecaa22f45592bf9ba45bb42a8 Pratik Nayak 2017-12-03 Adding wrapper for cudagetDeviceCount()
+0b8296cc2e15571e7f3201cb483e45abf48ffe02 Pratik Nayak 2017-12-03 Merging local to repo
+255508d2770bd52e52d5fe579ede724b4b5a1f5c Pratik Nayak 2017-12-03 synchronize minor changes
+d8f4362da5ac9716a2e270c1af5d86c650fb990b Pratik Nayak 2017-12-03 synchronize() wrapper added
+8cf7f75286b285228a45fc155966b71d88839526 Pratik Nayak 2017-12-02 Inital test passes
+db2f6067002c54005dc5f8e7ef16dabfcc71c044 Pratik Nayak 2017-12-02 gpu executor tests bug resolve
+693e0d7c89f7533fb30dd502ec109d84593ebbfc Pratik Nayak 2017-12-02 push for testing on tx2
+5e226aff5c0657ef9e6178c70a873312e561d135 Pratik Nayak 2017-12-01 Changed cuda build system
+760ee8cc8acb87b33a8ce85a07bd4a1e65221d10 Goran Flegar 2017-12-01 Fix build issues with CUDA
+0e0db774a96f3846f74276cd8be1b9a91d607d5a Pratik Nayak 2017-12-01 Some syntax errors corrected
+e0c232f4efd7a711da785dfcf21f429641b50458 Pratik Nayak 2017-12-01 small changes
+479c37b2dfa6df31bc9ad979f32a907e74a17f5e Pratik Nayak 2017-12-01 With initial unit tests
+652e25b5e31640513e3fc337c5b9c4340bbf4fa5 Pratik Nayak 2017-11-30 pre-test commit
+6c0292afc5337158735a6bcc30dcfee799e97b43 Pratik Nayak 2017-11-30 backup for possible crash
+177410c70dfc8586b9fc2e280d51b52c247fd657 Goran Flegar 2017-11-29 Add relevant changes from reference_dense_matrix
+43eddb7c06f45403215501b52de650f7bac4be52 Pratik Nayak 2017-11-29 build changes
+8c5960634590ce7982e6eea0eb37de9ac99e1e17 Goran Flegar 2017-11-28 Add basic blas bindings to dense matrix
+ea6c838d1227962e1acd5c79eb2315c96fd801d5 Goran Flegar 2017-11-28 Refactor dense matrix code
+19eec9eb6ae197be336290d0e3108281eddef2a2 Goran Flegar 2017-11-28 Add unit tests for dense matrix
+a7e842a868ae0be577cb24b231d89def7775c6c5 Goran Flegar 2017-11-28 Add initial version of dense matrix
+002cf3dfef4ca4bb7146c54a4be3d87e4e35fbf9 Goran Flegar 2017-11-27 Add initial LinOp implementation
+a65df8d5b6b459059c1737300487dcda6afc44ca Goran Flegar 2017-11-27 Checkout temporary array implementation
+542e05d9a68ac8404583ae4342afe6f2c80e5566 Goran Flegar 2017-11-25 Add unit tests for array
+7e9f769eb7a445fc1c5d987c27c09c1bad499d7a Goran Flegar 2017-11-25 Merge branch 'develop' into array
+5c6c152576775bb1743faa9888b0c91075f0e6cc Hartwig 2017-11-24 Merge branch 'mac-build' into 'develop'
+1d91ce5c9aa995db80417d42c09dc094ac764748 Goran Flegar 2017-11-24 Resolve missing symbols when building ginkgo_cpu
+2d0cef6c447acadd638141f4bcda51db0dcd6194 Goran Flegar 2017-11-24 Move Executor vtables to single link unit
+9b2486883f57896a75b20f6d3eeae648c2208795 Goran Flegar 2017-11-24 Add initial implementation of Array
+52ad20cc638f1c4583911ebc42abd20cc470a30a Pratik Nayak 2017-11-16 Merge branch 'library_rename' into 'develop'
+e53f9c2f9a09b0373a0eab3b26273f931f0ca6ed Goran Flegar 2017-11-16 Rename msparse to ginkgo
+cfccb2e6a7e3292de88c025e75aa7e72ce686ebb Pratik Nayak 2017-11-11 Merge branch 'executor' into 'develop'
+a2bd1f7cea9993c68897bd8ac2698181c7305034 Goran Flegar 2017-11-09 Split Operation tests to multiple tests
+001ab84e3acee2adf832270f63791f2a48f9c4e8 Goran Flegar 2017-11-07 Reduce array size in executor test
+86fb71cdbd56cbf952cfc463db8322268af9ccf7 Goran Flegar 2017-11-07 Fix typo in executor docs
+991dbba80f3ccd090a3beee53e09da0ba600d513 Pratik Nayak 2017-11-02 Merge branch 'gitignore' into 'develop'
+64528dce3e8bfb53e49d83d6d0fd55d2c8614e32 Goran Flegar 2017-10-31 Throw NotCompiled error when calling GpuExecutor
+54037626fcc456b87dff6ba95a27a3e9699dfe6f Goran Flegar 2017-10-31 Add NotCompiled error type and helper method
+9739ac2bb24330d9280b7fc461e9e7b4bea54b25 Goran Flegar 2017-10-31 Merge branch 'develop' into executor
+f77cdae611c37cc953f39aceece14aa87710be77 Goran Flegar 2017-10-31 Merge branch 'exception' into 'develop'
+8de2ebcc1675286d9911cfac65bf76a8076a84be Goran Flegar 2017-10-27 Update Executor and Operation documentation
+0e50c151c9f6555feb67ab3e144cb2b3b786b849 Goran Flegar 2017-10-27 Replace git-cmake-format fork with kbenzie's repo
+d1bb7f6ff6dc98f6294ab9f2e42bb0d5cef56222 Goran Flegar 2017-10-27 Add unit tests for executor
+897a0562ccd0159a08136c709f8821e9beb1f8a2 Goran Flegar 2017-10-27 Merge branch 'exception' into executor
+92690c38f446ab4aaa8f7ceea6bbb58e0c14edc2 Goran Flegar 2017-10-27 Move exception unit tests to base/ subdirectory
+55d1206043bbefe41a603d8240644fb784207d8f Goran Flegar 2017-10-27 Move exception related files to core/base
+1a95598341ecbabfa5f8c40472e42f7bf6cd1103 Goran Flegar 2017-10-27 Revert "Adding .gitignore file with Cmake and Cpp exclusions"
+eba9d9dcb702ef4c8a0ab7070c0873ad64898e20 Goran Flegar 2017-10-27 Add initial executor implementation
+b49ccab6258d37816a29c0971ca017236671755a Pratik Nayak 2017-10-27 adding gitignore
+0966ce0c8c632b60d8de1553e2ce06fd565445ff Pratik Nayak 2017-10-26 Adding .gitignore file with Cmake and Cpp exclusions
+c475d44fb1646438380415c598fb6cdad588d78e Goran Flegar 2017-10-24 Incorporate @jdrzaic's comments
+3bba6456afeaa8fc4565f73e9582fcf9e90c5b3c Goran Flegar 2017-10-23 Remove code duplication in build scripts
+8a0ffd65b0ca1963c43f08291012752f47a25c83 Goran Flegar 2017-10-23 Add format target to cmake, resolves #33
+801cb086a0fdedfda74f919081bf5ee636780dc3 Goran Flegar 2017-10-23 Run unit tests through clang-format
+c6b3fa4452629848aee8559c6cc11e6029d2da28 Goran Flegar 2017-10-23 Run code through clang-format
+3af2cf25469b535f3fe71b02704583b09d0fc6d2 Goran Flegar 2017-10-23 Fix typos
+fbf70a9cbcb701f7d8c9bd4cf7969d4dd8b9fd56 Goran Flegar 2017-10-21 Add unit tests for exception helpers
+b87b50d98c61480c457e05a91a49390cb1defa9b Goran Flegar 2017-10-20 Add unit tests for exception classes
+7d9543ce0cae08ff4470409fc10f1503dedbb300 Goran Flegar 2017-10-20 Add basic build system and testing files.
+3fc16ab358030f6d4a366e5c05edf9572c1c64e3 Goran Flegar 2017-10-19 Initial implementation of #32
+3eca4d1c25cb04a084dd77c6e8c273da9603e17f Goran Flegar 2017-07-13 Add README.md
