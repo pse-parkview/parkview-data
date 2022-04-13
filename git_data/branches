@@ -1,132 +1,140 @@
-2019toms-adaptive-bj-solver
-2019toms-adaptive-bj-v0
-2019toms-adaptive-bj-v1
-2019toms-adaptive-bj-v2
-2019toms-adaptive-bj-v3
-2019toms-adaptive-bj-v4
-2019toms-adaptive-bj-v5
-2019toms-ginkgo-paper
-accessed-csr
-add-move-from
-add_hwloc_installmd
-amgx_pgm_generation
-array_dynamic_functionality
-async-develop
-batch-csr-transpose
-batch-develop
-batch-sparse-qr
-batchop-linop
-bccoo
-bccoo_cygwin
-bccoo_gpu
-bccoo_rebase
-benchmark_work_estimate
-block-matrices
-cbgmres_orth
-check_cmake_3.12.3
-compute_memory_flops
-compute_memory_rebased
-conditional_pick
-constraint-handling
-constraint-handling-kernels
-csr_lookup
-cuda2hip_matrix_backup
-data_validation
-default_block_size_symbol
-dense_reductions_tmp
-develop
-dist-multigrid
-dist-ras-precond
-distributed-develop
-distributed-matrix
-distributed-matrix-kernels
-distributed-solvers
-distributed-vector-kernels
-dot_accessor
-dpcpp_devep
-dpcpp_issue
-dpcpp_port_jacobi
-dpcpp_port_kcycle
-dpcpp_port_par_ilu_ic
-dpcpp_porting
-export_symbols
-expr_csr
-expt-develop
-feat_dist_vect_from_local
-figure_cl
-fix-mixin-logger
-fix_initcheck
-fix_nohipfft
-generic_executor
-gh-pages
-ginkgo-2.0.0
-global_constant
-glu
-gmres_simplify
-hipblas-dot
-hyteg-integration
-improve_multigrid
-initial_tfqmr
-ir_cache_split_criterion
-ir_for_mg
-iterative_base
-master
-matrix_existing_data
-mc64
-memory-space-abstraction
-mfem-compat
-mfem-wrappers
-micro-bench
-minres-solver
-mixed_ell_benchmark
-modified_bicgstab
-mp-isai
-mp_idr
-mp_isai
-mpi-base
-mpi-base-dist-mat
-mpi-dist-jacobi
-mpi-for-hyteg
-mpi-for-hyteg-with-rm
-mpi-rebase
-multidot
-multigrid-selection
-neighborhood-comm
-new-distributed-matrix
-new-mpi-for-hyteg
-ogl
-ogl_column_vector_add
-ogl_develop
-omp_ilu
-openCARP
-openCARP_backend
-padded_interleaved_block_jacobi
-parbilu
-pkgconfig_recursive
-posit_cb_gmres
-public_common_kernels
-qr
-rebase-dist-ras-precond
-reduction_tuning
-ref_direct_solve
-residual_cache
-resource_manager
-rgs-coarsening
-scalar-parameter-handling
-scaling_example
-schwarz-precond
-simple_device_obj
-solver_behavior
-solver_comparison
-solver_test
-sparsity_csr_apply
-spgemm
-spmv_fixes
-temp_cuda11rc
-topc-spmv-paper
-transpose
-trisolve-residual
-trs_isai
-two_level
-unify_tests
-value-semantics
+[
+    "2019toms-adaptive-bj-solver",
+    "2019toms-adaptive-bj-v0",
+    "2019toms-adaptive-bj-v1",
+    "2019toms-adaptive-bj-v2",
+    "2019toms-adaptive-bj-v3",
+    "2019toms-adaptive-bj-v4",
+    "2019toms-adaptive-bj-v5",
+    "2019toms-ginkgo-paper",
+    "HEAD",
+    "accessed-csr",
+    "add_hwloc_installmd",
+    "amgx_pgm_generation",
+    "array_dynamic_functionality",
+    "async-develop",
+    "batch-csr-transpose",
+    "batch-develop",
+    "batch-preconditioners",
+    "batch-sparse-qr",
+    "batchop-linop",
+    "bccoo",
+    "bccoo_cygwin",
+    "bccoo_gpu",
+    "bccoo_rebase",
+    "benchmark_work_estimate",
+    "block-matrices",
+    "cbgmres_orth",
+    "check_cmake_3.12.3",
+    "compute_memory_flops",
+    "compute_memory_rebased",
+    "conditional_pick",
+    "constraint-handling",
+    "constraint-handling-kernels",
+    "csr_lookup",
+    "cuda2hip_matrix_backup",
+    "data_validation",
+    "default_block_size_symbol",
+    "develop",
+    "dist-multigrid",
+    "dist-ras-precond",
+    "distributed-develop",
+    "distributed-matrix",
+    "distributed-matrix-kernels",
+    "distributed-solvers",
+    "distributed-vector-kernels",
+    "dot_accessor",
+    "dpcpp_devep",
+    "dpcpp_issue",
+    "dpcpp_port_jacobi",
+    "dpcpp_port_kcycle",
+    "dpcpp_port_par_ilu_ic",
+    "dpcpp_porting",
+    "export_symbols",
+    "expr_csr",
+    "expt-develop",
+    "feat_dist_vect_from_local",
+    "figure_cl",
+    "fix-mixin-logger",
+    "fix_gko_share",
+    "fix_initcheck",
+    "fix_nohipfft",
+    "generic_executor",
+    "gh-pages",
+    "ginkgo-2.0.0",
+    "global_constant",
+    "glu",
+    "gmres_restart_fix",
+    "gmres_simplify",
+    "hipblas-dot",
+    "hyteg-integration",
+    "improve_multigrid",
+    "initial_tfqmr",
+    "ir_cache_split_criterion",
+    "ir_for_mg",
+    "iterative_base",
+    "master",
+    "matrix_existing_data",
+    "mc64",
+    "memory-space-abstraction",
+    "mfem-compat",
+    "mfem-wrappers",
+    "micro-bench",
+    "minres-solver",
+    "mixed_ell_benchmark",
+    "modified_bicgstab",
+    "mp-isai",
+    "mp_idr",
+    "mp_isai",
+    "mpi-base",
+    "mpi-base-dist-mat",
+    "mpi-dist-jacobi",
+    "mpi-for-hyteg",
+    "mpi-for-hyteg-with-rm",
+    "mpi-rebase",
+    "multidot",
+    "multigrid-selection",
+    "neighborhood-comm",
+    "new-distributed-matrix",
+    "new-mpi-for-hyteg",
+    "ogl",
+    "ogl_column_vector_add",
+    "ogl_develop",
+    "omp_ilu",
+    "omp_trisolve",
+    "openCARP",
+    "openCARP_backend",
+    "padded_interleaved_block_jacobi",
+    "parbilu",
+    "pkgconfig_recursive",
+    "posit_cb_gmres",
+    "public_common_kernels",
+    "qr",
+    "rebase-dist-ras-precond",
+    "reduction_tuning",
+    "ref_direct_solve",
+    "rename-partition",
+    "residual_cache",
+    "resource_manager",
+    "rgs-coarsening",
+    "scalar-parameter-handling",
+    "scaling_example",
+    "schwarz-precond",
+    "shellchecked",
+    "simple_device_obj",
+    "slurm_jobs",
+    "solver_behavior",
+    "solver_comparison",
+    "solver_test",
+    "sparsity_csr_apply",
+    "spgemm",
+    "spmv_fixes",
+    "temp_cuda11rc",
+    "topc-spmv-paper",
+    "transpose",
+    "trisolve-residual",
+    "trs_isai",
+    "two_level",
+    "unify_tests",
+    "value-semantics"
+]
