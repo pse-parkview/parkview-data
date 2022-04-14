@@ -4,20 +4,20 @@
           blas: ["schmoink"],
           solver: [],
           preconditioner: [],
-          conversion[],
+          conversion: [],
       },
       849dfbc5ae4631edb028ff53debd802539de29df: {
           spmv: ["yoink", "yaink"],
           blas: [],
           solver: [],
           preconditioner: [],
-          conversion[],
+          conversion: [],
       },
       029e0f851e2379b2c42d61d5ac199f97660dfd3b: {
           spmv: ["yoink", "yaink"],
           blas: ["schmoink"],
           solver: [],
           preconditioner: [],
-          conversion[],
+          conversion: [],
       },
 }
