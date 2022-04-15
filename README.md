@@ -38,11 +38,11 @@
 ```
 {
       "<commit sha>": {
-          spmv: [<available devices>],
-          blas: [<available devices>],
-          solver: [<available devices>],
-          preconditioner: [<available devices>],
-          conversion: [<available devices>],
+          "spmv": [<available devices>],
+          "blas": [<available devices>],
+          "solver": [<available devices>],
+          "preconditioner": [<available devices>],
+          "conversion": [<available devices>],
       },
       ...
 }
