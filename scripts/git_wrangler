@@ -25,7 +25,7 @@ def download_repo() -> git.Repo:
 
 
 def get_branches(repo: git.Repo) -> Iterable[git.refs.reference.Reference]:
-    return repo.remote().refs
+    return filter(lambda x: x.name.replace("origin/", "") != "HEAD", repo.remote().refs)
 
 
 def get_commits(
@@ -35,7 +35,7 @@ def get_commits(
         lambda x: {
             "sha": x.hexsha,
             "author": x.author.name,
-            "date": datetime.datetime.fromtimestamp(x.authored_date),
+            "date": datetime.datetime.fromtimestamp(x.authored_date).isoformat(),
             "message": x.message,
         },
         repo.iter_commits(branch),
@@ -63,7 +63,7 @@ def dump_branches(branches: Iterable[git.refs.reference.Reference]) -> None:
 def main():
     repo = download_repo()
     print(f"cloned repo to {TMPDIR}")
-    branches = get_branches(repo)
+    branches = list(get_branches(repo))
 
     dump_branches(branches)
 
