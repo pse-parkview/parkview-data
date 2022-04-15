@@ -44,7 +44,7 @@ def get_commits(
 
 def dump_commits(commits: Iterable[Commit], branch: str) -> None:
     commits = list(commits)
-    path = os.path.join(BASE_PATH, "../git_data/", branch)
+    path = os.path.normpath(os.path.join(BASE_PATH, "../git_data/", f"{branch}.json"))
 
     print(f"dumping commits for {branch} to {path}")
     with open(path, "w+") as f:
@@ -53,7 +53,7 @@ def dump_commits(commits: Iterable[Commit], branch: str) -> None:
 
 def dump_branches(branches: Iterable[git.refs.reference.Reference]) -> None:
     branches = list(map(lambda x: x.name.replace("origin/", ""), branches))
-    path = os.path.join(BASE_PATH, "../git_data/branches")
+    path = os.path.normpath(os.path.join(BASE_PATH, "../git_data/branches.json"))
 
     print(f"dumping branches to {path}")
     with open(path, "w+") as f:
