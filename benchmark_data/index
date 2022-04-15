@@ -1,23 +1,23 @@
 {
-      fda151c64e7b31ccdd52e78f5dfc49e4683c5300: {
-          spmv: ["yoink", "yaink"],
-          blas: ["schmoink"],
-          solver: [],
-          preconditioner: [],
-          conversion: [],
+    "fda151c64e7b31ccdd52e78f5dfc49e4683c5300": {
+        "spmv": ["yoink", "yaink"],
+          "blas": ["schmoink"],
+          "solver": [],
+          "preconditioner": [],
+          "conversion": []
       },
-      849dfbc5ae4631edb028ff53debd802539de29df: {
-          spmv: ["yoink", "yaink"],
-          blas: [],
-          solver: [],
-          preconditioner: [],
-          conversion: [],
+      "849dfbc5ae4631edb028ff53debd802539de29df": {
+          "spmv": ["yoink", "yaink"],
+          "blas": [],
+          "solver": [],
+          "preconditioner": [],
+          "conversion": []
       },
-      029e0f851e2379b2c42d61d5ac199f97660dfd3b: {
-          spmv: ["yoink", "yaink"],
-          blas: ["schmoink"],
-          solver: [],
-          preconditioner: [],
-          conversion: [],
-      },
+      "029e0f851e2379b2c42d61d5ac199f97660dfd3b": {
+          "spmv": ["yoink", "yaink"],
+          "blas": ["schmoink"],
+          "solver": [],
+          "preconditioner": [],
+          "conversion": []
+      }
 }
