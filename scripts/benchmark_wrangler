@@ -23,6 +23,8 @@ def find_devices(path: str) -> Dict[str, str]:
     commit = {benchmark: [] for benchmark in benchmarks}
     for benchmark in benchmarks:
         benchmark_path = os.path.join(path, benchmark)
+        if not os.path.isdir(benchmark_path):
+            continue
         for device in os.listdir(benchmark_path):
             device = os.path.splitext(device)[0]
             commit[benchmark].append(device)
