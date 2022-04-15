@@ -14,6 +14,7 @@
     "fda151c64e7b31ccdd52e78f5dfc49e4683c5300": {
         "spmv": [
             "yaink",
+            "schwupp",
             "yoink"
         ],
         "blas": [
