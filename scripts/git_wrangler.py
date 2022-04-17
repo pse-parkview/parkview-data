@@ -7,9 +7,13 @@ import os
 from typing import Iterable, Dict
 
 URL = "https://github.com/ginkgo-project/ginkgo.git"
-TMPDIR = tempfile.mkdtemp()
+#  TMPDIR = tempfile.mkdtemp()
+TMPDIR = "/tmp/tmplz4_rwyk"
 
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
+
+
+IGNORED_BRANCHES = ["HEAD", "gh-pages"]
 
 
 Commit = Dict[str, str]
@@ -17,15 +21,29 @@ Commit = Dict[str, str]
 
 def download_repo() -> git.Repo:
     print(f"cloning to {TMPDIR}")
-    repo = git.Repo.clone_from(URL, TMPDIR)
-    #  repo = git.Repo(TMPDIR)
+    #  repo = git.Repo.clone_from(URL, TMPDIR)
+    repo = git.Repo(TMPDIR)
     repo.remote().fetch()
 
     return repo
 
 
-def get_branches(repo: git.Repo) -> Iterable[git.refs.reference.Reference]:
-    return filter(lambda x: x.name.replace("origin/", "") != "HEAD", repo.remote().refs)
+def get_branches(
+    repo: git.Repo, sort: bool = False
+) -> Iterable[git.refs.reference.Reference]:
+    branches = filter(
+        lambda x: x.name.replace("origin/", "") not in IGNORED_BRANCHES,
+        repo.remote().refs,
+    )
+    if sort:
+        branches = sorted(
+            branches,
+            key=lambda x: datetime.datetime.fromtimestamp(
+                repo.commit(x.name).authored_date
+            ),
+            reverse=True,
+        )
+    return branches
 
 
 def get_commits(
@@ -63,13 +81,13 @@ def dump_branches(branches: Iterable[git.refs.reference.Reference]) -> None:
 def main():
     repo = download_repo()
     print(f"cloned repo to {TMPDIR}")
-    branches = list(get_branches(repo))
+    branches = list(get_branches(repo, sort=True))
 
     dump_branches(branches)
 
     for branch in branches:
         branch_name = branch.name.replace("origin/", "")
-        if branch_name == "HEAD":
+        if branch_name in IGNORED_BRANCHES:
             continue
         commits = get_commits(branch, repo)
         dump_commits(commits, branch_name)
