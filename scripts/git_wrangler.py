@@ -7,8 +7,7 @@ import os
 from typing import Iterable, Dict
 
 URL = "https://github.com/ginkgo-project/ginkgo.git"
-#  TMPDIR = tempfile.mkdtemp()
-TMPDIR = "/tmp/tmplz4_rwyk"
+TMPDIR = tempfile.mkdtemp()
 
 BASE_PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -21,8 +20,8 @@ Commit = Dict[str, str]
 
 def download_repo() -> git.Repo:
     print(f"cloning to {TMPDIR}")
-    #  repo = git.Repo.clone_from(URL, TMPDIR)
-    repo = git.Repo(TMPDIR)
+    repo = git.Repo.clone_from(URL, TMPDIR)
+    #  repo = git.Repo(TMPDIR)
     repo.remote().fetch()
 
     return repo
